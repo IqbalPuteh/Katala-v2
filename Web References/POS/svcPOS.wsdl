@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddNewTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSDetail">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewTransactionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDateResult" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEnd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strVoucherNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHeaderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTransId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransHeaderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTransId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSumSalesPerMonth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMonth01" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMonth02" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSumSalesPerMonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSumSalesPerMonthResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSumSalesPerDays">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDate01" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate02" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSumSalesPerDaysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSumSalesPerDaysResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSumSalesPerHours">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDate01" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate02" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHour01" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHour02" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSumSalesPerHoursResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSumSalesPerHoursResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSumFreqPerDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDate01" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate02" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSumFreqPerDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSumFreqPerDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEnd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReturnItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnItemData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strReturnId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReturnItemDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReturnItemDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckItemStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckItemStockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckItemStockResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSReturn">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewReturnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewReturnResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReturn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSReturn">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReturnResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetItemSalesPerPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtUntil" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFilterBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemSalesPerPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemSalesPerPeriodResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemSalesPerDay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFilterBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemSalesPerDayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemSalesPerDayResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemSalesPerDayWithTax">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFilterBy" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemSalesPerDayWithTaxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemSalesPerDayWithTaxResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddNewTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewTransaction" />
+  </wsdl:message>
+  <wsdl:message name="AddNewTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDate" />
+  </wsdl:message>
+  <wsdl:message name="GetDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemData" />
+  </wsdl:message>
+  <wsdl:message name="GetItemDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetTransHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetTransDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSumSalesPerMonthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSumSalesPerMonth" />
+  </wsdl:message>
+  <wsdl:message name="GetSumSalesPerMonthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSumSalesPerMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSumSalesPerDaysSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSumSalesPerDays" />
+  </wsdl:message>
+  <wsdl:message name="GetSumSalesPerDaysSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSumSalesPerDaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSumSalesPerHoursSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSumSalesPerHours" />
+  </wsdl:message>
+  <wsdl:message name="GetSumSalesPerHoursSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSumSalesPerHoursResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSumFreqPerDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSumFreqPerDate" />
+  </wsdl:message>
+  <wsdl:message name="GetSumFreqPerDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSumFreqPerDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReturnItem" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReturnItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnItemDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReturnItemData" />
+  </wsdl:message>
+  <wsdl:message name="GetReturnItemDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReturnItemDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckItemStockSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckItemStock" />
+  </wsdl:message>
+  <wsdl:message name="CheckItemStockSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckItemStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewReturnSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewReturn" />
+  </wsdl:message>
+  <wsdl:message name="AddNewReturnSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReturnSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateReturn" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReturnSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateReturnResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSalesPerPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemSalesPerPeriod" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSalesPerPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemSalesPerPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSalesPerDaySoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemSalesPerDay" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSalesPerDaySoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemSalesPerDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSalesPerDayWithTaxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemSalesPerDayWithTax" />
+  </wsdl:message>
+  <wsdl:message name="GetItemSalesPerDayWithTaxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemSalesPerDayWithTaxResponse" />
+  </wsdl:message>
+  <wsdl:portType name="svcPOSSoap">
+    <wsdl:operation name="AddNewTransaction">
+      <wsdl:input message="tns:AddNewTransactionSoapIn" />
+      <wsdl:output message="tns:AddNewTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDate">
+      <wsdl:input message="tns:GetDateSoapIn" />
+      <wsdl:output message="tns:GetDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemData">
+      <wsdl:input message="tns:GetItemDataSoapIn" />
+      <wsdl:output message="tns:GetItemDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHeader">
+      <wsdl:input message="tns:GetHeaderSoapIn" />
+      <wsdl:output message="tns:GetHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransHeader">
+      <wsdl:input message="tns:GetTransHeaderSoapIn" />
+      <wsdl:output message="tns:GetTransHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransDetail">
+      <wsdl:input message="tns:GetTransDetailSoapIn" />
+      <wsdl:output message="tns:GetTransDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSumSalesPerMonth">
+      <wsdl:input message="tns:GetSumSalesPerMonthSoapIn" />
+      <wsdl:output message="tns:GetSumSalesPerMonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSumSalesPerDays">
+      <wsdl:input message="tns:GetSumSalesPerDaysSoapIn" />
+      <wsdl:output message="tns:GetSumSalesPerDaysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSumSalesPerHours">
+      <wsdl:input message="tns:GetSumSalesPerHoursSoapIn" />
+      <wsdl:output message="tns:GetSumSalesPerHoursSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSumFreqPerDate">
+      <wsdl:input message="tns:GetSumFreqPerDateSoapIn" />
+      <wsdl:output message="tns:GetSumFreqPerDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnItem">
+      <wsdl:input message="tns:GetReturnItemSoapIn" />
+      <wsdl:output message="tns:GetReturnItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnItemData">
+      <wsdl:input message="tns:GetReturnItemDataSoapIn" />
+      <wsdl:output message="tns:GetReturnItemDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckItemStock">
+      <wsdl:input message="tns:CheckItemStockSoapIn" />
+      <wsdl:output message="tns:CheckItemStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewReturn">
+      <wsdl:input message="tns:AddNewReturnSoapIn" />
+      <wsdl:output message="tns:AddNewReturnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReturn">
+      <wsdl:input message="tns:UpdateReturnSoapIn" />
+      <wsdl:output message="tns:UpdateReturnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSalesPerPeriod">
+      <wsdl:input message="tns:GetItemSalesPerPeriodSoapIn" />
+      <wsdl:output message="tns:GetItemSalesPerPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSalesPerDay">
+      <wsdl:input message="tns:GetItemSalesPerDaySoapIn" />
+      <wsdl:output message="tns:GetItemSalesPerDaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSalesPerDayWithTax">
+      <wsdl:input message="tns:GetItemSalesPerDayWithTaxSoapIn" />
+      <wsdl:output message="tns:GetItemSalesPerDayWithTaxSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="svcPOSSoap" type="tns:svcPOSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddNewTransaction">
+      <soap:operation soapAction="http://tempuri.org/AddNewTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDate">
+      <soap:operation soapAction="http://tempuri.org/GetDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemData">
+      <soap:operation soapAction="http://tempuri.org/GetItemData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHeader">
+      <soap:operation soapAction="http://tempuri.org/GetHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransHeader">
+      <soap:operation soapAction="http://tempuri.org/GetTransHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransDetail">
+      <soap:operation soapAction="http://tempuri.org/GetTransDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSumSalesPerMonth">
+      <soap:operation soapAction="http://tempuri.org/GetSumSalesPerMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSumSalesPerDays">
+      <soap:operation soapAction="http://tempuri.org/GetSumSalesPerDays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSumSalesPerHours">
+      <soap:operation soapAction="http://tempuri.org/GetSumSalesPerHours" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSumFreqPerDate">
+      <soap:operation soapAction="http://tempuri.org/GetSumFreqPerDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnItem">
+      <soap:operation soapAction="http://tempuri.org/GetReturnItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnItemData">
+      <soap:operation soapAction="http://tempuri.org/GetReturnItemData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckItemStock">
+      <soap:operation soapAction="http://tempuri.org/CheckItemStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewReturn">
+      <soap:operation soapAction="http://tempuri.org/AddNewReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReturn">
+      <soap:operation soapAction="http://tempuri.org/UpdateReturn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSalesPerPeriod">
+      <soap:operation soapAction="http://tempuri.org/GetItemSalesPerPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSalesPerDay">
+      <soap:operation soapAction="http://tempuri.org/GetItemSalesPerDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSalesPerDayWithTax">
+      <soap:operation soapAction="http://tempuri.org/GetItemSalesPerDayWithTax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="svcPOSSoap12" type="tns:svcPOSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="AddNewTransaction">
+      <soap12:operation soapAction="http://tempuri.org/AddNewTransaction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDate">
+      <soap12:operation soapAction="http://tempuri.org/GetDate" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemData">
+      <soap12:operation soapAction="http://tempuri.org/GetItemData" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHeader">
+      <soap12:operation soapAction="http://tempuri.org/GetHeader" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransHeader">
+      <soap12:operation soapAction="http://tempuri.org/GetTransHeader" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetTransDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSumSalesPerMonth">
+      <soap12:operation soapAction="http://tempuri.org/GetSumSalesPerMonth" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSumSalesPerDays">
+      <soap12:operation soapAction="http://tempuri.org/GetSumSalesPerDays" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSumSalesPerHours">
+      <soap12:operation soapAction="http://tempuri.org/GetSumSalesPerHours" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSumFreqPerDate">
+      <soap12:operation soapAction="http://tempuri.org/GetSumFreqPerDate" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnItem">
+      <soap12:operation soapAction="http://tempuri.org/GetReturnItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnItemData">
+      <soap12:operation soapAction="http://tempuri.org/GetReturnItemData" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckItemStock">
+      <soap12:operation soapAction="http://tempuri.org/CheckItemStock" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewReturn">
+      <soap12:operation soapAction="http://tempuri.org/AddNewReturn" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReturn">
+      <soap12:operation soapAction="http://tempuri.org/UpdateReturn" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSalesPerPeriod">
+      <soap12:operation soapAction="http://tempuri.org/GetItemSalesPerPeriod" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSalesPerDay">
+      <soap12:operation soapAction="http://tempuri.org/GetItemSalesPerDay" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemSalesPerDayWithTax">
+      <soap12:operation soapAction="http://tempuri.org/GetItemSalesPerDayWithTax" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="svcPOS">
+    <wsdl:port name="svcPOSSoap" binding="tns:svcPOSSoap">
+      <soap:address location="http://localhost/KatalaWebServices/svcPOS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="svcPOSSoap12" binding="tns:svcPOSSoap12">
+      <soap12:address location="http://localhost/KatalaWebServices/svcPOS.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

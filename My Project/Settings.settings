@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Katala_HouseKeeping_svcHouseKeeping" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/KatalaWebServices/svcHouseKeeping.Asmx</Value>
+    </Setting>
+    <Setting Name="Katala_HRIS_svcHRIS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/KatalaWebServices/svcHRIS.Asmx</Value>
+    </Setting>
+    <Setting Name="Katala_Loan_svcLoan" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/katalawebservices/svcloan.asmx</Value>
+    </Setting>
+    <Setting Name="Katala_Membership_svcMembership" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/KatalaWebServices/svcMembership.asmx</Value>
+    </Setting>
+    <Setting Name="Katala_POS_svcPOS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/KatalaWebServices/svcPOS.asmx</Value>
+    </Setting>
+    <Setting Name="Katala_Retail_svcRetail" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/KatalaWebServices/svcRetail.asmx</Value>
+    </Setting>
+    <Setting Name="Katala_SystemSecurity_svcSystemSecurity" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/KatalaWebServices/svcSystemSecurity.Asmx</Value>
+    </Setting>
+    <Setting Name="Katala_Warehouse_svcWarehouse" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/KatalaWebServices/svcWarehouse.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

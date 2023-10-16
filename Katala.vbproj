@@ -1,0 +1,254 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <ProjectType>Local</ProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ApplicationIcon>Bitmaps\L8.ICO</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Katala.My.MyApplication</StartupObject>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <MyType>WindowsForms</MyType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Katala.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Katala.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile />
+    <DefineConstants />
+    <DefineDebug>false</DefineDebug>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Backup1\**" />
+    <EmbeddedResource Remove="Backup1\**" />
+    <None Remove="Backup1\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxOposCashDrawer_1_8_Lib">
+      <Guid>{CCB90040-B81E-11D2-AB74-0040054C3719}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="AxOposPOSPrinter_1_8_Lib">
+      <Guid>{CCB90150-B81E-11D2-AB74-0040054C3719}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+    </COMReference>
+    <COMReference Include="Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <COMReference Include="OposCashDrawer_1_8_Lib">
+      <Guid>{CCB90040-B81E-11D2-AB74-0040054C3719}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="OposPOSPrinter_1_8_Lib">
+      <Guid>{CCB90150-B81E-11D2-AB74-0040054C3719}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+    <Reference Update="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Update="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Update="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Update="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.Office.Interop" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bitmaps\02FLY09.ICO" />
+    <Content Include="Bitmaps\3.ICO" />
+    <Content Include="Bitmaps\40.ICO" />
+    <Content Include="Bitmaps\APPLICATION.ICO" />
+    <Content Include="Bitmaps\APPLICATIONS.ICO" />
+    <Content Include="Bitmaps\BLASTING.ICO" />
+    <Content Include="Bitmaps\BOMB21.ICO" />
+    <Content Include="Bitmaps\CAR2.ICO" />
+    <Content Include="Bitmaps\CAR3.ICO" />
+    <Content Include="Bitmaps\CELLPHONE.ICO" />
+    <Content Include="Bitmaps\CHECK.ICO" />
+    <Content Include="Bitmaps\CKIT.ICO" />
+    <Content Include="Bitmaps\Close.ICO" />
+    <Content Include="Bitmaps\CLOSE1.ICO" />
+    <Content Include="Bitmaps\DYNAMITE1.ICO" />
+    <Content Include="Bitmaps\DYNOMITE.ICO" />
+    <Content Include="Bitmaps\Exit.ICO" />
+    <Content Include="Bitmaps\GRAPH04.ICO" />
+    <Content Include="Bitmaps\KoperasiLogo.bmp" />
+    <Content Include="Bitmaps\L8.ICO" />
+    <Content Include="Bitmaps\Logo Koperasi.JPG" />
+    <Content Include="Bitmaps\MISC28.ICO" />
+    <Content Include="Bitmaps\Open.ICO" />
+    <Content Include="Bitmaps\OPEN1.ICO" />
+    <Content Include="Bitmaps\PERSON2.ICO" />
+    <Content Include="Bitmaps\Pos01.ico" />
+    <Content Include="Bitmaps\PROGRAMS.ICO" />
+    <Content Include="Bitmaps\REPORT.ICO" />
+    <Content Include="Bitmaps\REPORTS.ICO" />
+    <Content Include="Bitmaps\SystemLogo.bmp" />
+    <Content Include="Bitmaps\SYSTEMS.ICO" />
+    <Content Include="Bitmaps\TAXI.ICO" />
+    <Content Include="Bitmaps\TELP.ICO" />
+    <Content Include="Bitmaps\Telp01.ICO" />
+    <Content Include="Bitmaps\TOOLS.ICO" />
+    <Content Include="Bitmaps\TOOLS2.ICO" />
+    <Content Include="Bitmaps\USER.ICO" />
+    <None Update="Web References\HouseKeeping\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Update="Web References\HRIS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Update="Web References\Loan\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Update="Web References\Membership\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Update="Web References\POS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Update="Web References\Retail\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Update="Web References\SystemSecurity\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Update="Web References\Warehouse\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <WebReferences Include="Web References\" />
+    <WebReferenceUrl Include="http://localhost/KatalaWebServices/svcHouseKeeping.Asmx">
+      <RelPath>Web References\HouseKeeping\</RelPath>
+      <UrlBehavior>Dynamic</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/KatalaWebServices/svcHRIS.Asmx">
+      <RelPath>Web References\HRIS\</RelPath>
+      <UrlBehavior>Dynamic</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/katalawebservices/svcloan.asmx">
+      <RelPath>Web References\Loan\</RelPath>
+      <UrlBehavior>Dynamic</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/KatalaWebServices/svcMembership.asmx">
+      <RelPath>Web References\Membership\</RelPath>
+      <UrlBehavior>Dynamic</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/KatalaWebServices/svcPOS.asmx">
+      <RelPath>Web References\POS\</RelPath>
+      <UrlBehavior>Dynamic</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/KatalaWebServices/svcRetail.asmx">
+      <RelPath>Web References\Retail\</RelPath>
+      <UrlBehavior>Dynamic</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/KatalaWebServices/svcSystemSecurity.Asmx">
+      <RelPath>Web References\SystemSecurity\</RelPath>
+      <UrlBehavior>Dynamic</UrlBehavior>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost/KatalaWebServices/svcWarehouse.asmx">
+      <RelPath>Web References\Warehouse\</RelPath>
+      <UrlBehavior>Dynamic</UrlBehavior>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="clsRs232.vb" />
+    <Compile Remove="Kredit\frmLoanTransactionHistory.vb" />
+    <Compile Remove="Membership\frmTransaction.vb" />
+    <Compile Remove="Membership\frmTransaction01.vb" />
+    <Compile Remove="My Project\Settings.Designer.vb" />
+    <Compile Remove="POS\frmRetailTransaction.vb" />
+    <Compile Remove="POS\frmRetailTransaction01.vb" />
+    <Compile Remove="Warehouse\frmWarehouseMove.vb" />
+    <Compile Remove="Web References\Kredit\Reference.vb" />
+    <EmbeddedResource Remove="Kredit\frmLoanTransactionHistory.resx" />
+    <EmbeddedResource Remove="Membership\frmTransaction.resx" />
+    <EmbeddedResource Remove="Membership\frmTransaction01.resx" />
+    <EmbeddedResource Remove="POS\frmRetailTransaction.resx" />
+    <EmbeddedResource Remove="POS\frmRetailTransaction01.resx" />
+    <EmbeddedResource Remove="Warehouse\frmWarehouseMove.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="mssccprj.scc" />
+    <None Remove="UpgradeLog.htm" />
+    <None Remove="vssver2.scc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <AssemblyVersion>1.0.%2a</AssemblyVersion>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,1991 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetMemberTransactionSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberTransactionSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberTransactionSummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberYearlyIntrestVal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberYearlyIntrestValResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberYearlyIntrestValResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthlyTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAcctPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthlyTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMonthlyTransactionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthlyTransactionByType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAcctPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthlyTransactionByTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMonthlyTransactionByTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthlyInterest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAcctPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthlyInterestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMonthlyInterestResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MembershipClosingProcess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCurrentAcctPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNextAcctPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MembershipClosingProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MembershipClosingProcessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MembershipClosingProcessOrig">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCurrentAcctPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNextAcctPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MembershipClosingProcessOrigResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MembershipClosingProcessOrigResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadMembershipTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadMembershipTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadMembershipTransactionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMembershipAcctPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMembershipAcctPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMembershipAcctPeriodResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMemberCapitalInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMemberCapitalInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateMemberCapitalInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewMemberCapital">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewMemberCapitalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewMemberCapitalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberCapitalInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberCapitalInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberCapitalInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberDetailCapitalInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEffectiveDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberDetailCapitalInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberDetailCapitalInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMembershipSystemParameters">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMembershipSystemParametersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateMembershipSystemParametersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberSystemInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberSystemInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberSystemInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailMemberInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMemberNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailMemberInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDetailMemberInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMemberNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMemberName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMemberInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMemberInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateMemberInfoResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMemberInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMemberNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteMemberInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddNewMemberInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewMemberInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewMemberInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAccPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAccPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTransType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="Total" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberInstallmentSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberInstallmentSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberInstallmentSummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInstallmentInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtMonth" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInstallmentInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInstallmentInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewTransactionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAccPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTransactionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTotalSaving">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMemberNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalSavingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTotalSavingResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadMembershipDevidenEnhanced">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResourceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSHUYear" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadMembershipDevidenEnhancedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadMembershipDevidenEnhancedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadMembershipSpecialIntrest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadMembershipSpecialIntrestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadMembershipSpecialIntrestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthlyIntrestPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthlyIntrestPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMonthlyIntrestPaymentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthlyAdminDeduction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthlyAdminDeductionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMonthlyAdminDeductionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIntrestType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetIntrestTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetIntrestTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransCodeDB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransCodeDBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransCodeDBResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransCodeCR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransCodeCRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransCodeCRResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadLoanDeduction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadLoanDeductionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadLoanDeductionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanDeductionUploadStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanDeductionUploadStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLoanDeductionUploadStatusResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberPin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberPinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberPinResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUpdateNewPin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddUpdateNewPinResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddUpdateNewPinResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMemberTransactionSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberTransactionSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberTransactionSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberTransactionSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberYearlyIntrestValSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberYearlyIntrestVal" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberYearlyIntrestValSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberYearlyIntrestValResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMonthlyTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMonthlyTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyTransactionByTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMonthlyTransactionByType" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyTransactionByTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMonthlyTransactionByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyInterestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMonthlyInterest" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyInterestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMonthlyInterestResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipClosingProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:MembershipClosingProcess" />
+  </wsdl:message>
+  <wsdl:message name="MembershipClosingProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:MembershipClosingProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="MembershipClosingProcessOrigSoapIn">
+    <wsdl:part name="parameters" element="tns:MembershipClosingProcessOrig" />
+  </wsdl:message>
+  <wsdl:message name="MembershipClosingProcessOrigSoapOut">
+    <wsdl:part name="parameters" element="tns:MembershipClosingProcessOrigResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadMembershipTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadMembershipTransaction" />
+  </wsdl:message>
+  <wsdl:message name="UploadMembershipTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadMembershipTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMembershipAcctPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMembershipAcctPeriod" />
+  </wsdl:message>
+  <wsdl:message name="GetMembershipAcctPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMembershipAcctPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMemberCapitalInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMemberCapitalInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMemberCapitalInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMemberCapitalInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewMemberCapitalSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewMemberCapital" />
+  </wsdl:message>
+  <wsdl:message name="AddNewMemberCapitalSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewMemberCapitalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberCapitalInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberCapitalInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberCapitalInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberCapitalInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberDetailCapitalInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberDetailCapitalInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberDetailCapitalInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberDetailCapitalInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberName" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMembershipSystemParametersSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMembershipSystemParameters" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMembershipSystemParametersSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMembershipSystemParametersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberSystemInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberSystemInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberSystemInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberSystemInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailMemberInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDetailMemberInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailMemberInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDetailMemberInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMemberInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMemberInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMemberInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMemberInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMemberInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteMemberInfo" />
+  </wsdl:message>
+  <wsdl:message name="DeleteMemberInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteMemberInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewMemberInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewMemberInfo" />
+  </wsdl:message>
+  <wsdl:message name="AddNewMemberInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewMemberInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactionInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactionDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberInstallmentSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberInstallmentSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberInstallmentSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberInstallmentSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInstallmentInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInstallmentInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetInstallmentInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInstallmentInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewTransaction" />
+  </wsdl:message>
+  <wsdl:message name="AddNewTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTransaction" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalSavingSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTotalSaving" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalSavingSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTotalSavingResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadMembershipDevidenEnhancedSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadMembershipDevidenEnhanced" />
+  </wsdl:message>
+  <wsdl:message name="UploadMembershipDevidenEnhancedSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadMembershipDevidenEnhancedResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadMembershipSpecialIntrestSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadMembershipSpecialIntrest" />
+  </wsdl:message>
+  <wsdl:message name="UploadMembershipSpecialIntrestSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadMembershipSpecialIntrestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyIntrestPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMonthlyIntrestPayment" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyIntrestPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMonthlyIntrestPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyAdminDeductionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMonthlyAdminDeduction" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthlyAdminDeductionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMonthlyAdminDeductionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetIntrestTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetIntrestType" />
+  </wsdl:message>
+  <wsdl:message name="GetIntrestTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetIntrestTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransCodeDBSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransCodeDB" />
+  </wsdl:message>
+  <wsdl:message name="GetTransCodeDBSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransCodeDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransCodeCRSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransCodeCR" />
+  </wsdl:message>
+  <wsdl:message name="GetTransCodeCRSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransCodeCRResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadLoanDeductionSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadLoanDeduction" />
+  </wsdl:message>
+  <wsdl:message name="UploadLoanDeductionSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadLoanDeductionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanDeductionUploadStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoanDeductionUploadStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanDeductionUploadStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoanDeductionUploadStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPinSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberPin" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberPinSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberPinResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddUpdateNewPinSoapIn">
+    <wsdl:part name="parameters" element="tns:AddUpdateNewPin" />
+  </wsdl:message>
+  <wsdl:message name="AddUpdateNewPinSoapOut">
+    <wsdl:part name="parameters" element="tns:AddUpdateNewPinResponse" />
+  </wsdl:message>
+  <wsdl:portType name="svcMembershipSoap">
+    <wsdl:operation name="GetMemberTransactionSummary">
+      <wsdl:input message="tns:GetMemberTransactionSummarySoapIn" />
+      <wsdl:output message="tns:GetMemberTransactionSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberYearlyIntrestVal">
+      <wsdl:input message="tns:GetMemberYearlyIntrestValSoapIn" />
+      <wsdl:output message="tns:GetMemberYearlyIntrestValSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyTransaction">
+      <wsdl:input message="tns:GetMonthlyTransactionSoapIn" />
+      <wsdl:output message="tns:GetMonthlyTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyTransactionByType">
+      <wsdl:input message="tns:GetMonthlyTransactionByTypeSoapIn" />
+      <wsdl:output message="tns:GetMonthlyTransactionByTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyInterest">
+      <wsdl:input message="tns:GetMonthlyInterestSoapIn" />
+      <wsdl:output message="tns:GetMonthlyInterestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MembershipClosingProcess">
+      <wsdl:input message="tns:MembershipClosingProcessSoapIn" />
+      <wsdl:output message="tns:MembershipClosingProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MembershipClosingProcessOrig">
+      <wsdl:input message="tns:MembershipClosingProcessOrigSoapIn" />
+      <wsdl:output message="tns:MembershipClosingProcessOrigSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadMembershipTransaction">
+      <wsdl:input message="tns:UploadMembershipTransactionSoapIn" />
+      <wsdl:output message="tns:UploadMembershipTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMembershipAcctPeriod">
+      <wsdl:input message="tns:GetMembershipAcctPeriodSoapIn" />
+      <wsdl:output message="tns:GetMembershipAcctPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberCapitalInfo">
+      <wsdl:input message="tns:UpdateMemberCapitalInfoSoapIn" />
+      <wsdl:output message="tns:UpdateMemberCapitalInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMemberCapital">
+      <wsdl:input message="tns:AddNewMemberCapitalSoapIn" />
+      <wsdl:output message="tns:AddNewMemberCapitalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberCapitalInfo">
+      <wsdl:input message="tns:GetMemberCapitalInfoSoapIn" />
+      <wsdl:output message="tns:GetMemberCapitalInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberDetailCapitalInfo">
+      <wsdl:input message="tns:GetMemberDetailCapitalInfoSoapIn" />
+      <wsdl:output message="tns:GetMemberDetailCapitalInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberName">
+      <wsdl:input message="tns:GetMemberNameSoapIn" />
+      <wsdl:output message="tns:GetMemberNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMembershipSystemParameters">
+      <wsdl:input message="tns:UpdateMembershipSystemParametersSoapIn" />
+      <wsdl:output message="tns:UpdateMembershipSystemParametersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberSystemInfo">
+      <wsdl:input message="tns:GetMemberSystemInfoSoapIn" />
+      <wsdl:output message="tns:GetMemberSystemInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailMemberInfo">
+      <wsdl:input message="tns:GetDetailMemberInfoSoapIn" />
+      <wsdl:output message="tns:GetDetailMemberInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInfo">
+      <wsdl:input message="tns:GetMemberInfoSoapIn" />
+      <wsdl:output message="tns:GetMemberInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberInfo">
+      <wsdl:input message="tns:UpdateMemberInfoSoapIn" />
+      <wsdl:output message="tns:UpdateMemberInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMemberInfo">
+      <wsdl:input message="tns:DeleteMemberInfoSoapIn" />
+      <wsdl:output message="tns:DeleteMemberInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMemberInfo">
+      <wsdl:input message="tns:AddNewMemberInfoSoapIn" />
+      <wsdl:output message="tns:AddNewMemberInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionInfo">
+      <wsdl:input message="tns:GetTransactionInfoSoapIn" />
+      <wsdl:output message="tns:GetTransactionInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <wsdl:input message="tns:GetTransactionSoapIn" />
+      <wsdl:output message="tns:GetTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDetail">
+      <wsdl:input message="tns:GetTransactionDetailSoapIn" />
+      <wsdl:output message="tns:GetTransactionDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInstallmentSummary">
+      <wsdl:input message="tns:GetMemberInstallmentSummarySoapIn" />
+      <wsdl:output message="tns:GetMemberInstallmentSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallmentInfo">
+      <wsdl:input message="tns:GetInstallmentInfoSoapIn" />
+      <wsdl:output message="tns:GetInstallmentInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewTransaction">
+      <wsdl:input message="tns:AddNewTransactionSoapIn" />
+      <wsdl:output message="tns:AddNewTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaction">
+      <wsdl:input message="tns:UpdateTransactionSoapIn" />
+      <wsdl:output message="tns:UpdateTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalSaving">
+      <wsdl:input message="tns:GetTotalSavingSoapIn" />
+      <wsdl:output message="tns:GetTotalSavingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadMembershipDevidenEnhanced">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Fungsi untuk upload deviden member simpanan</wsdl:documentation>
+      <wsdl:input message="tns:UploadMembershipDevidenEnhancedSoapIn" />
+      <wsdl:output message="tns:UploadMembershipDevidenEnhancedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadMembershipSpecialIntrest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Function to upload Special Intrest. Created for Special Intrest upload in 2007</wsdl:documentation>
+      <wsdl:input message="tns:UploadMembershipSpecialIntrestSoapIn" />
+      <wsdl:output message="tns:UploadMembershipSpecialIntrestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyIntrestPayment">
+      <wsdl:input message="tns:GetMonthlyIntrestPaymentSoapIn" />
+      <wsdl:output message="tns:GetMonthlyIntrestPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyAdminDeduction">
+      <wsdl:input message="tns:GetMonthlyAdminDeductionSoapIn" />
+      <wsdl:output message="tns:GetMonthlyAdminDeductionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntrestType">
+      <wsdl:input message="tns:GetIntrestTypeSoapIn" />
+      <wsdl:output message="tns:GetIntrestTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransCodeDB">
+      <wsdl:input message="tns:GetTransCodeDBSoapIn" />
+      <wsdl:output message="tns:GetTransCodeDBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransCodeCR">
+      <wsdl:input message="tns:GetTransCodeCRSoapIn" />
+      <wsdl:output message="tns:GetTransCodeCRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadLoanDeduction">
+      <wsdl:input message="tns:UploadLoanDeductionSoapIn" />
+      <wsdl:output message="tns:UploadLoanDeductionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanDeductionUploadStatus">
+      <wsdl:input message="tns:GetLoanDeductionUploadStatusSoapIn" />
+      <wsdl:output message="tns:GetLoanDeductionUploadStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPin">
+      <wsdl:input message="tns:GetMemberPinSoapIn" />
+      <wsdl:output message="tns:GetMemberPinSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUpdateNewPin">
+      <wsdl:input message="tns:AddUpdateNewPinSoapIn" />
+      <wsdl:output message="tns:AddUpdateNewPinSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="svcMembershipSoap" type="tns:svcMembershipSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMemberTransactionSummary">
+      <soap:operation soapAction="http://tempuri.org/GetMemberTransactionSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberYearlyIntrestVal">
+      <soap:operation soapAction="http://tempuri.org/GetMemberYearlyIntrestVal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyTransaction">
+      <soap:operation soapAction="http://tempuri.org/GetMonthlyTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyTransactionByType">
+      <soap:operation soapAction="http://tempuri.org/GetMonthlyTransactionByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyInterest">
+      <soap:operation soapAction="http://tempuri.org/GetMonthlyInterest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MembershipClosingProcess">
+      <soap:operation soapAction="http://tempuri.org/MembershipClosingProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MembershipClosingProcessOrig">
+      <soap:operation soapAction="http://tempuri.org/MembershipClosingProcessOrig" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMembershipTransaction">
+      <soap:operation soapAction="http://tempuri.org/UploadMembershipTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMembershipAcctPeriod">
+      <soap:operation soapAction="http://tempuri.org/GetMembershipAcctPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberCapitalInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateMemberCapitalInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMemberCapital">
+      <soap:operation soapAction="http://tempuri.org/AddNewMemberCapital" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberCapitalInfo">
+      <soap:operation soapAction="http://tempuri.org/GetMemberCapitalInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberDetailCapitalInfo">
+      <soap:operation soapAction="http://tempuri.org/GetMemberDetailCapitalInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberName">
+      <soap:operation soapAction="http://tempuri.org/GetMemberName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMembershipSystemParameters">
+      <soap:operation soapAction="http://tempuri.org/UpdateMembershipSystemParameters" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberSystemInfo">
+      <soap:operation soapAction="http://tempuri.org/GetMemberSystemInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailMemberInfo">
+      <soap:operation soapAction="http://tempuri.org/GetDetailMemberInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInfo">
+      <soap:operation soapAction="http://tempuri.org/GetMemberInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateMemberInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMemberInfo">
+      <soap:operation soapAction="http://tempuri.org/DeleteMemberInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMemberInfo">
+      <soap:operation soapAction="http://tempuri.org/AddNewMemberInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionInfo">
+      <soap:operation soapAction="http://tempuri.org/GetTransactionInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <soap:operation soapAction="http://tempuri.org/GetTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDetail">
+      <soap:operation soapAction="http://tempuri.org/GetTransactionDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInstallmentSummary">
+      <soap:operation soapAction="http://tempuri.org/GetMemberInstallmentSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallmentInfo">
+      <soap:operation soapAction="http://tempuri.org/GetInstallmentInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewTransaction">
+      <soap:operation soapAction="http://tempuri.org/AddNewTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaction">
+      <soap:operation soapAction="http://tempuri.org/UpdateTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalSaving">
+      <soap:operation soapAction="http://tempuri.org/GetTotalSaving" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMembershipDevidenEnhanced">
+      <soap:operation soapAction="http://tempuri.org/UploadMembershipDevidenEnhanced" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMembershipSpecialIntrest">
+      <soap:operation soapAction="http://tempuri.org/UploadMembershipSpecialIntrest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyIntrestPayment">
+      <soap:operation soapAction="http://tempuri.org/GetMonthlyIntrestPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyAdminDeduction">
+      <soap:operation soapAction="http://tempuri.org/GetMonthlyAdminDeduction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntrestType">
+      <soap:operation soapAction="http://tempuri.org/GetIntrestType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransCodeDB">
+      <soap:operation soapAction="http://tempuri.org/GetTransCodeDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransCodeCR">
+      <soap:operation soapAction="http://tempuri.org/GetTransCodeCR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadLoanDeduction">
+      <soap:operation soapAction="http://tempuri.org/UploadLoanDeduction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanDeductionUploadStatus">
+      <soap:operation soapAction="http://tempuri.org/GetLoanDeductionUploadStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPin">
+      <soap:operation soapAction="http://tempuri.org/GetMemberPin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUpdateNewPin">
+      <soap:operation soapAction="http://tempuri.org/AddUpdateNewPin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="svcMembershipSoap12" type="tns:svcMembershipSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="GetMemberTransactionSummary">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberTransactionSummary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberYearlyIntrestVal">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberYearlyIntrestVal" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyTransaction">
+      <soap12:operation soapAction="http://tempuri.org/GetMonthlyTransaction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyTransactionByType">
+      <soap12:operation soapAction="http://tempuri.org/GetMonthlyTransactionByType" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyInterest">
+      <soap12:operation soapAction="http://tempuri.org/GetMonthlyInterest" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MembershipClosingProcess">
+      <soap12:operation soapAction="http://tempuri.org/MembershipClosingProcess" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MembershipClosingProcessOrig">
+      <soap12:operation soapAction="http://tempuri.org/MembershipClosingProcessOrig" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMembershipTransaction">
+      <soap12:operation soapAction="http://tempuri.org/UploadMembershipTransaction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMembershipAcctPeriod">
+      <soap12:operation soapAction="http://tempuri.org/GetMembershipAcctPeriod" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberCapitalInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMemberCapitalInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMemberCapital">
+      <soap12:operation soapAction="http://tempuri.org/AddNewMemberCapital" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberCapitalInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberCapitalInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberDetailCapitalInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberDetailCapitalInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberName">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberName" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMembershipSystemParameters">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMembershipSystemParameters" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberSystemInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberSystemInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailMemberInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetDetailMemberInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMemberInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMemberInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMemberInfo">
+      <soap12:operation soapAction="http://tempuri.org/DeleteMemberInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewMemberInfo">
+      <soap12:operation soapAction="http://tempuri.org/AddNewMemberInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactionInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransaction">
+      <soap12:operation soapAction="http://tempuri.org/GetTransaction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetTransactionDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberInstallmentSummary">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberInstallmentSummary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallmentInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetInstallmentInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewTransaction">
+      <soap12:operation soapAction="http://tempuri.org/AddNewTransaction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTransaction">
+      <soap12:operation soapAction="http://tempuri.org/UpdateTransaction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalSaving">
+      <soap12:operation soapAction="http://tempuri.org/GetTotalSaving" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMembershipDevidenEnhanced">
+      <soap12:operation soapAction="http://tempuri.org/UploadMembershipDevidenEnhanced" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadMembershipSpecialIntrest">
+      <soap12:operation soapAction="http://tempuri.org/UploadMembershipSpecialIntrest" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyIntrestPayment">
+      <soap12:operation soapAction="http://tempuri.org/GetMonthlyIntrestPayment" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonthlyAdminDeduction">
+      <soap12:operation soapAction="http://tempuri.org/GetMonthlyAdminDeduction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntrestType">
+      <soap12:operation soapAction="http://tempuri.org/GetIntrestType" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransCodeDB">
+      <soap12:operation soapAction="http://tempuri.org/GetTransCodeDB" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransCodeCR">
+      <soap12:operation soapAction="http://tempuri.org/GetTransCodeCR" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadLoanDeduction">
+      <soap12:operation soapAction="http://tempuri.org/UploadLoanDeduction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanDeductionUploadStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetLoanDeductionUploadStatus" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberPin">
+      <soap12:operation soapAction="http://tempuri.org/GetMemberPin" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUpdateNewPin">
+      <soap12:operation soapAction="http://tempuri.org/AddUpdateNewPin" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="svcMembership">
+    <wsdl:port name="svcMembershipSoap" binding="tns:svcMembershipSoap">
+      <soap:address location="http://localhost/KatalaWebServices/svcMembership.asmx" />
+    </wsdl:port>
+    <wsdl:port name="svcMembershipSoap12" binding="tns:svcMembershipSoap12">
+      <soap12:address location="http://localhost/KatalaWebServices/svcMembership.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

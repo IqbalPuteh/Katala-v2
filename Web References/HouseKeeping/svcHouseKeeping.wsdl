@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetResourceType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProgramId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProgramId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResourceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceCodeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceCodeDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProgramId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResourceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResourceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceCodeDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceCodeDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewResourceCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewResourceCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewResourceCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResourceCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProgramId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResourceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResourceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResourceCodeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateResourceCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResourceCodeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWarehouse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDefault" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWarehouseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWarehouseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSystemDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSystemDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSystemDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAcctPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAcctPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAcctPeriodResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceCodeType1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strProgramId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strResourceType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strType1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetResourceCodeType1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetResourceCodeType1Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetResourceTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceType" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceCode" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceCodeDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceCodeDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceCodeDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceCodeDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewResourceCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewResourceCode" />
+  </wsdl:message>
+  <wsdl:message name="AddNewResourceCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewResourceCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResourceCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteResourceCode" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResourceCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResourceCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateResourceCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateResourceCode" />
+  </wsdl:message>
+  <wsdl:message name="UpdateResourceCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateResourceCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWarehouse" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWarehouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSystemDate" />
+  </wsdl:message>
+  <wsdl:message name="GetSystemDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSystemDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAcctPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAcctPeriod" />
+  </wsdl:message>
+  <wsdl:message name="GetAcctPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAcctPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceCodeType1SoapIn">
+    <wsdl:part name="parameters" element="tns:GetResourceCodeType1" />
+  </wsdl:message>
+  <wsdl:message name="GetResourceCodeType1SoapOut">
+    <wsdl:part name="parameters" element="tns:GetResourceCodeType1Response" />
+  </wsdl:message>
+  <wsdl:portType name="svcHouseKeepingSoap">
+    <wsdl:operation name="GetResourceType">
+      <wsdl:input message="tns:GetResourceTypeSoapIn" />
+      <wsdl:output message="tns:GetResourceTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCode">
+      <wsdl:input message="tns:GetResourceCodeSoapIn" />
+      <wsdl:output message="tns:GetResourceCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCodeDetail">
+      <wsdl:input message="tns:GetResourceCodeDetailSoapIn" />
+      <wsdl:output message="tns:GetResourceCodeDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewResourceCode">
+      <wsdl:input message="tns:AddNewResourceCodeSoapIn" />
+      <wsdl:output message="tns:AddNewResourceCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResourceCode">
+      <wsdl:input message="tns:DeleteResourceCodeSoapIn" />
+      <wsdl:output message="tns:DeleteResourceCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResourceCode">
+      <wsdl:input message="tns:UpdateResourceCodeSoapIn" />
+      <wsdl:output message="tns:UpdateResourceCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouse">
+      <wsdl:input message="tns:GetWarehouseSoapIn" />
+      <wsdl:output message="tns:GetWarehouseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDate">
+      <wsdl:input message="tns:GetSystemDateSoapIn" />
+      <wsdl:output message="tns:GetSystemDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAcctPeriod">
+      <wsdl:input message="tns:GetAcctPeriodSoapIn" />
+      <wsdl:output message="tns:GetAcctPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCodeType1">
+      <wsdl:input message="tns:GetResourceCodeType1SoapIn" />
+      <wsdl:output message="tns:GetResourceCodeType1SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="svcHouseKeepingSoap" type="tns:svcHouseKeepingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetResourceType">
+      <soap:operation soapAction="http://tempuri.org/GetResourceType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCode">
+      <soap:operation soapAction="http://tempuri.org/GetResourceCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCodeDetail">
+      <soap:operation soapAction="http://tempuri.org/GetResourceCodeDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewResourceCode">
+      <soap:operation soapAction="http://tempuri.org/AddNewResourceCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResourceCode">
+      <soap:operation soapAction="http://tempuri.org/DeleteResourceCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResourceCode">
+      <soap:operation soapAction="http://tempuri.org/UpdateResourceCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouse">
+      <soap:operation soapAction="http://tempuri.org/GetWarehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDate">
+      <soap:operation soapAction="http://tempuri.org/GetSystemDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcctPeriod">
+      <soap:operation soapAction="http://tempuri.org/GetAcctPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCodeType1">
+      <soap:operation soapAction="http://tempuri.org/GetResourceCodeType1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="svcHouseKeepingSoap12" type="tns:svcHouseKeepingSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="GetResourceType">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceType" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCode">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceCode" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCodeDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceCodeDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewResourceCode">
+      <soap12:operation soapAction="http://tempuri.org/AddNewResourceCode" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResourceCode">
+      <soap12:operation soapAction="http://tempuri.org/DeleteResourceCode" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResourceCode">
+      <soap12:operation soapAction="http://tempuri.org/UpdateResourceCode" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouse">
+      <soap12:operation soapAction="http://tempuri.org/GetWarehouse" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDate">
+      <soap12:operation soapAction="http://tempuri.org/GetSystemDate" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAcctPeriod">
+      <soap12:operation soapAction="http://tempuri.org/GetAcctPeriod" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetResourceCodeType1">
+      <soap12:operation soapAction="http://tempuri.org/GetResourceCodeType1" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="svcHouseKeeping">
+    <wsdl:port name="svcHouseKeepingSoap" binding="tns:svcHouseKeepingSoap">
+      <soap:address location="http://localhost/KatalaWebServices/svcHouseKeeping.Asmx" />
+    </wsdl:port>
+    <wsdl:port name="svcHouseKeepingSoap12" binding="tns:svcHouseKeepingSoap12">
+      <soap12:address location="http://localhost/KatalaWebServices/svcHouseKeeping.Asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

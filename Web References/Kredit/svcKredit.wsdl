@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/KatalaWebServices/svcKredit" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/KatalaWebServices/svcKredit" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/KatalaWebServices/svcKredit">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="GetLastRegisterNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLastRegisterNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLastRegisterNumberResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKreditRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRegPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKreditType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLoanId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKreditRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKreditRegistrationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKreditRegistrationDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strLoanId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetKreditRegistrationDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetKreditRegistrationDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddKreditRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddKreditRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddKreditRegistrationResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyKreditRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyKreditRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModifyKreditRegistrationResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLastRegisterNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLastRegisterNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetLastRegisterNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLastRegisterNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKreditRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKreditRegistration" />
+  </wsdl:message>
+  <wsdl:message name="GetKreditRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKreditRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetKreditRegistrationDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetKreditRegistrationDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetKreditRegistrationDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetKreditRegistrationDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddKreditRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:AddKreditRegistration" />
+  </wsdl:message>
+  <wsdl:message name="AddKreditRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:AddKreditRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyKreditRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyKreditRegistration" />
+  </wsdl:message>
+  <wsdl:message name="ModifyKreditRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyKreditRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="svcKreditSoap">
+    <wsdl:operation name="GetLastRegisterNumber">
+      <wsdl:input message="tns:GetLastRegisterNumberSoapIn" />
+      <wsdl:output message="tns:GetLastRegisterNumberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKreditRegistration">
+      <wsdl:input message="tns:GetKreditRegistrationSoapIn" />
+      <wsdl:output message="tns:GetKreditRegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetKreditRegistrationDetail">
+      <wsdl:input message="tns:GetKreditRegistrationDetailSoapIn" />
+      <wsdl:output message="tns:GetKreditRegistrationDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddKreditRegistration">
+      <wsdl:input message="tns:AddKreditRegistrationSoapIn" />
+      <wsdl:output message="tns:AddKreditRegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyKreditRegistration">
+      <wsdl:input message="tns:ModifyKreditRegistrationSoapIn" />
+      <wsdl:output message="tns:ModifyKreditRegistrationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="svcKreditSoap" type="tns:svcKreditSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="GetLastRegisterNumber">
+      <soap:operation soapAction="http://tempuri.org/KatalaWebServices/svcKredit/GetLastRegisterNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKreditRegistration">
+      <soap:operation soapAction="http://tempuri.org/KatalaWebServices/svcKredit/GetKreditRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKreditRegistrationDetail">
+      <soap:operation soapAction="http://tempuri.org/KatalaWebServices/svcKredit/GetKreditRegistrationDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddKreditRegistration">
+      <soap:operation soapAction="http://tempuri.org/KatalaWebServices/svcKredit/AddKreditRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyKreditRegistration">
+      <soap:operation soapAction="http://tempuri.org/KatalaWebServices/svcKredit/ModifyKreditRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="svcKredit">
+    <documentation xmlns="http://schemas.xmlsoap.org/wsdl/" />
+    <wsdl:port name="svcKreditSoap" binding="tns:svcKreditSoap">
+      <soap:address location="http://localhost/KatalaWebServices/svcKredit.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

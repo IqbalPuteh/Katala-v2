@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://localhost/KatalaWebServices/svcLoan" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://localhost/KatalaWebServices/svcLoan" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://localhost/KatalaWebServices/svcLoan">
+      <s:element name="GetEscrowAcctPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEscrowAcctPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEscrowAcctPeriodResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLoanStandart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLoanStandartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteLoanStandartResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanPaymentStandart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembership_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanPaymentStandartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLoanPaymentStandartResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUploadStandartPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUploadStandartPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUploadStandartPeriodResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadLoanStandart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadLoanStandartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UploadLoanStandartResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanAcctPeriod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanAcctPeriodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLoanAcctPeriodResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateClosingProcess">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCurrentAcctPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNextAcctPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateClosingProcessResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateClosingProcessResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLoanRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLoanRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddLoanRegistrationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRegPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKreditType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLoanId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLoanRegistrationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLoanRegistration">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLoanRegistrationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateLoanRegistrationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLoanStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLoanStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateLoanStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanTobeEnded">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intMonthVar" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanTobeEndedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLoanTobeEndedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanRegistrated">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDateStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanRegistratedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLoanRegistratedResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberLoanTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMembership_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberLoanTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberLoanTransactionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewEscrowTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewEscrowTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewEscrowTransactionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLoanTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTransId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLoanTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteLoanTransactionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanInstallmentSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPeriod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoanInstallmentSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLoanInstallmentSummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEscrowAcctPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEscrowAcctPeriod" />
+  </wsdl:message>
+  <wsdl:message name="GetEscrowAcctPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEscrowAcctPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoanStandartSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteLoanStandart" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoanStandartSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteLoanStandartResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanPaymentStandartSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoanPaymentStandart" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanPaymentStandartSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoanPaymentStandartResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUploadStandartPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUploadStandartPeriod" />
+  </wsdl:message>
+  <wsdl:message name="GetUploadStandartPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUploadStandartPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadLoanStandartSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadLoanStandart" />
+  </wsdl:message>
+  <wsdl:message name="UploadLoanStandartSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadLoanStandartResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanAcctPeriodSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoanAcctPeriod" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanAcctPeriodSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoanAcctPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateClosingProcessSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateClosingProcess" />
+  </wsdl:message>
+  <wsdl:message name="UpdateClosingProcessSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateClosingProcessResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddLoanRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:AddLoanRegistration" />
+  </wsdl:message>
+  <wsdl:message name="AddLoanRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:AddLoanRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoanRegistration" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoanRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLoanRegistrationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateLoanRegistration" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLoanRegistrationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateLoanRegistrationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLoanStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateLoanStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLoanStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateLoanStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanTobeEndedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoanTobeEnded" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanTobeEndedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoanTobeEndedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanRegistratedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoanRegistrated" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanRegistratedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoanRegistratedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberLoanTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberLoanTransaction" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberLoanTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberLoanTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEscrowTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewEscrowTransaction" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEscrowTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewEscrowTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoanTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteLoanTransaction" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoanTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteLoanTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanInstallmentSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoanInstallmentSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetLoanInstallmentSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoanInstallmentSummaryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="svcLoanSoap">
+    <wsdl:operation name="GetEscrowAcctPeriod">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by Katala</wsdl:documentation>
+      <wsdl:input message="tns:GetEscrowAcctPeriodSoapIn" />
+      <wsdl:output message="tns:GetEscrowAcctPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLoanStandart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by Katala</wsdl:documentation>
+      <wsdl:input message="tns:DeleteLoanStandartSoapIn" />
+      <wsdl:output message="tns:DeleteLoanStandartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanPaymentStandart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by Katala</wsdl:documentation>
+      <wsdl:input message="tns:GetLoanPaymentStandartSoapIn" />
+      <wsdl:output message="tns:GetLoanPaymentStandartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadStandartPeriod">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Melakukan Cek data Payroll pinjaman dari module Katala</wsdl:documentation>
+      <wsdl:input message="tns:GetUploadStandartPeriodSoapIn" />
+      <wsdl:output message="tns:GetUploadStandartPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadLoanStandart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Melakukan insert pada table LOAN_STANDART_DATA dari screen StandartUpload (Used by Katala</wsdl:documentation>
+      <wsdl:input message="tns:UploadLoanStandartSoapIn" />
+      <wsdl:output message="tns:UploadLoanStandartSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanAcctPeriod">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by LoanKatalaAdmin</wsdl:documentation>
+      <wsdl:input message="tns:GetLoanAcctPeriodSoapIn" />
+      <wsdl:output message="tns:GetLoanAcctPeriodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClosingProcess">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by LoanKatalaAdmin</wsdl:documentation>
+      <wsdl:input message="tns:UpdateClosingProcessSoapIn" />
+      <wsdl:output message="tns:UpdateClosingProcessSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLoanRegistration">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Melakukan penambahan row baru pada table LOAN_HEADER (Used by KatalaLoanAdmin)</wsdl:documentation>
+      <wsdl:input message="tns:AddLoanRegistrationSoapIn" />
+      <wsdl:output message="tns:AddLoanRegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanRegistration">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Mencari data pinjaman anggota pada table LOAN_HEADER (Used by KatalaLoanAdmin)</wsdl:documentation>
+      <wsdl:input message="tns:GetLoanRegistrationSoapIn" />
+      <wsdl:output message="tns:GetLoanRegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanRegistration">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Melakukan Update data pada row di table LOAN_HEADER (Used by KatalaLoanAdmin)</wsdl:documentation>
+      <wsdl:input message="tns:UpdateLoanRegistrationSoapIn" />
+      <wsdl:output message="tns:UpdateLoanRegistrationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Melakukan Update data pada row di table LOAN_HEADER (Used by KatalaLoanAdmin)</wsdl:documentation>
+      <wsdl:input message="tns:UpdateLoanStatusSoapIn" />
+      <wsdl:output message="tns:UpdateLoanStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanTobeEnded">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by KatalaLoanAdmin</wsdl:documentation>
+      <wsdl:input message="tns:GetLoanTobeEndedSoapIn" />
+      <wsdl:output message="tns:GetLoanTobeEndedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanRegistrated">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by KatalaLoanAdmin</wsdl:documentation>
+      <wsdl:input message="tns:GetLoanRegistratedSoapIn" />
+      <wsdl:output message="tns:GetLoanRegistratedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberLoanTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by KatalaLoanAdmin</wsdl:documentation>
+      <wsdl:input message="tns:GetMemberLoanTransactionSoapIn" />
+      <wsdl:output message="tns:GetMemberLoanTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEscrowTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by LoanKatalaAdmin</wsdl:documentation>
+      <wsdl:input message="tns:AddNewEscrowTransactionSoapIn" />
+      <wsdl:output message="tns:AddNewEscrowTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLoanTransaction">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by KatalaLoanAdmin</wsdl:documentation>
+      <wsdl:input message="tns:DeleteLoanTransactionSoapIn" />
+      <wsdl:output message="tns:DeleteLoanTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanInstallmentSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Used by KatalaLoanAdmin</wsdl:documentation>
+      <wsdl:input message="tns:GetLoanInstallmentSummarySoapIn" />
+      <wsdl:output message="tns:GetLoanInstallmentSummarySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="svcLoanSoap" type="tns:svcLoanSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEscrowAcctPeriod">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetEscrowAcctPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLoanStandart">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/DeleteLoanStandart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanPaymentStandart">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanPaymentStandart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadStandartPeriod">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetUploadStandartPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadLoanStandart">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/UploadLoanStandart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanAcctPeriod">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanAcctPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClosingProcess">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/UpdateClosingProcess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLoanRegistration">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/AddLoanRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanRegistration">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanRegistration">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/UpdateLoanRegistration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanStatus">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/UpdateLoanStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanTobeEnded">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanTobeEnded" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanRegistrated">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanRegistrated" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberLoanTransaction">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetMemberLoanTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEscrowTransaction">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/AddNewEscrowTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLoanTransaction">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/DeleteLoanTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanInstallmentSummary">
+      <soap:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanInstallmentSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="svcLoanSoap12" type="tns:svcLoanSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="GetEscrowAcctPeriod">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetEscrowAcctPeriod" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLoanStandart">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/DeleteLoanStandart" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanPaymentStandart">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanPaymentStandart" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUploadStandartPeriod">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetUploadStandartPeriod" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadLoanStandart">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/UploadLoanStandart" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanAcctPeriod">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanAcctPeriod" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClosingProcess">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/UpdateClosingProcess" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLoanRegistration">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/AddLoanRegistration" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanRegistration">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanRegistration" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanRegistration">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/UpdateLoanRegistration" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanStatus">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/UpdateLoanStatus" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanTobeEnded">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanTobeEnded" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanRegistrated">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanRegistrated" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberLoanTransaction">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetMemberLoanTransaction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEscrowTransaction">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/AddNewEscrowTransaction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLoanTransaction">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/DeleteLoanTransaction" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoanInstallmentSummary">
+      <soap12:operation soapAction="http://localhost/KatalaWebServices/svcLoan/GetLoanInstallmentSummary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="svcLoan">
+    <wsdl:port name="svcLoanSoap" binding="tns:svcLoanSoap">
+      <soap:address location="http://localhost/katalawebservices/svcloan.asmx" />
+    </wsdl:port>
+    <wsdl:port name="svcLoanSoap12" binding="tns:svcLoanSoap12">
+      <soap12:address location="http://localhost/katalawebservices/svcloan.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

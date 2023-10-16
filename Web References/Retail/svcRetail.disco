@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/KatalaWebServices/svcRetail.asmx?wsdl" docRef="http://localhost/KatalaWebServices/svcRetail.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/KatalaWebServices/svcRetail.asmx" xmlns:q1="http://tempuri.org/KatalaWebServices/svcRetail" binding="q1:svcRetailSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost/KatalaWebServices/svcRetail.asmx" xmlns:q2="http://tempuri.org/KatalaWebServices/svcRetail" binding="q2:svcRetailSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

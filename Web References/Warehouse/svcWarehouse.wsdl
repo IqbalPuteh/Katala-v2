@@ -1,0 +1,3306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetROItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetROItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetROItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strItemName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewItemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateItemInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSItem">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateItemInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteItemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSuppInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSuppCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSuppName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSuppNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSuppInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSuppInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewSupp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewSuppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewSuppResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSuppInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateSuppInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteSupp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSuppCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSuppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteSuppResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxPOId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxPOIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMaxPOIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOHeadInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPONo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSuppName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPONumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPOStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOHeadInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPOHeadInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPODetailInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPONo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPODetailInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPODetailInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewPO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSDetail">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewPOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewPOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSDetail">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePOResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeletePO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPONo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeletePOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplierLOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strSupplierNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplierLOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSupplierLOVResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemLOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemLOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemLOVResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemStockLOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetItemStockLOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetItemStockLOVResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOLOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPONo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOLOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPOLOVResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecieveInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPONo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEndDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecieveInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRecieveInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecieveHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPONo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecieveHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRecieveHeaderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecieveDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPONo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecieveDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRecieveDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalRecieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPONo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalRecieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTotalRecieveResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxRecId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPONo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxRecIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMaxRecIdResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewRecieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSDetail">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewRecieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewRecieveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRecieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSDetail">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRecieveResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteRecieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="lngRecId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRecieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteRecieveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strOption" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPOHeaderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPODetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPODetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPODetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplierList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSupplierListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSupplierListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWarehouseItemList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strWarehouseName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWarehouseItemListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWarehouseItemListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMovementItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtStartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtEndDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMovementItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMovementItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAdjId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdjHeaderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAdjId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdjDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoveHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMovId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoveHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMoveHeaderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoveDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMovId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMoveDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMoveDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockQTY">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockQTYResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockQTYResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strWarehouseId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDefaultValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockLOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strWarehouseId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDefaultValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockLOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockLOVResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockListLOV">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strDefaultValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockListLOVResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockListLOVResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxMovId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtMovDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxMovIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMaxMovIdResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxAdjId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtMovDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxAdjIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMaxAdjIdResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMoveItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSDetail">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMoveItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddMoveItemResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAdjustment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSDetail">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAdjustmentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateMovement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSDetail">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMovementResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAdjustment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intAdjId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjustmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdjustmentResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMovement">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intMovId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMovementResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMovementResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAdjustStock">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSHeader">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDSDetail">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAdjustStockResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddAdjustStockResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjustmentItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtStartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtEndDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjustmentItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdjustmentItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOReportSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOReportSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPOReportSummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOReportDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOReportDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPOReportDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecivedPOSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecivedPOSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRecivedPOSummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecivedPODetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRecivedPODetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRecivedPODetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMovementSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMovementSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMovementSummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMovementDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMovementDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMovementDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjustmentSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjustmentSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdjustmentSummaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjustmentDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtStart" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtEnd" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApp_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAdjustmentDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAdjustmentDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRptRecieveItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRptRecieveItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRptRecieveItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRptMoveItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRptMoveItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRptMoveItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRptAdjustItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRptAdjustItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRptAdjustItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRptPriceItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRptPriceItemResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRptPriceItemResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRptRecieveQTY">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPONo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRptRecieveQTYResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRptRecieveQTYResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strItemNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strWarehouseId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDefaultValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStockReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStockReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOSMontlyLostProfitReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dtDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPOSMontlyLostProfitReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPOSMontlyLostProfitReportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetROItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetROItem" />
+  </wsdl:message>
+  <wsdl:message name="GetROItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetROItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetItemInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewItemSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewItem" />
+  </wsdl:message>
+  <wsdl:message name="AddNewItemSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateItemInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateItemInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateItemInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateItemInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteItemSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteItem" />
+  </wsdl:message>
+  <wsdl:message name="DeleteItemSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSuppInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSuppInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetSuppInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSuppInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewSuppSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewSupp" />
+  </wsdl:message>
+  <wsdl:message name="AddNewSuppSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewSuppResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSuppInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateSuppInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateSuppInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateSuppInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSuppSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSupp" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSuppSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSuppResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxPOIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaxPOId" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxPOIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaxPOIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPOHeadInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPOHeadInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPOHeadInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPOHeadInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPODetailInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPODetailInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetPODetailInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPODetailInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewPOSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewPO" />
+  </wsdl:message>
+  <wsdl:message name="AddNewPOSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewPOResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePOSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePO" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePOSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePOResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePOSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePO" />
+  </wsdl:message>
+  <wsdl:message name="DeletePOSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePOResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplierLOVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupplierLOV" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplierLOVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupplierLOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemLOVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemLOV" />
+  </wsdl:message>
+  <wsdl:message name="GetItemLOVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemLOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetItemStockLOVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetItemStockLOV" />
+  </wsdl:message>
+  <wsdl:message name="GetItemStockLOVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetItemStockLOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPOLOVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPOLOV" />
+  </wsdl:message>
+  <wsdl:message name="GetPOLOVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPOLOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecieveInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRecieveInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetRecieveInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRecieveInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecieveHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRecieveHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetRecieveHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRecieveHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecieveDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRecieveDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetRecieveDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRecieveDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalRecieveSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTotalRecieve" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalRecieveSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTotalRecieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRecIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaxRecId" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRecIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaxRecIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewRecieveSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewRecieve" />
+  </wsdl:message>
+  <wsdl:message name="AddNewRecieveSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewRecieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRecieveSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRecieve" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRecieveSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateRecieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecieveSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRecieve" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRecieveSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRecieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPOHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPOHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPOHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPOHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPODetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPODetail" />
+  </wsdl:message>
+  <wsdl:message name="GetPODetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPODetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplierListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSupplierList" />
+  </wsdl:message>
+  <wsdl:message name="GetSupplierListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSupplierListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseItemListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWarehouseItemList" />
+  </wsdl:message>
+  <wsdl:message name="GetWarehouseItemListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWarehouseItemListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMovementItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMovementItem" />
+  </wsdl:message>
+  <wsdl:message name="GetMovementItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMovementItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdjHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdjHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdjDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdjDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMoveHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMoveHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetMoveHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMoveHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMoveDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMoveDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetMoveDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMoveDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockItem" />
+  </wsdl:message>
+  <wsdl:message name="GetStockItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQTYSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockQTY" />
+  </wsdl:message>
+  <wsdl:message name="GetStockQTYSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockQTYResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStock" />
+  </wsdl:message>
+  <wsdl:message name="GetStockSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockLOVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockLOV" />
+  </wsdl:message>
+  <wsdl:message name="GetStockLOVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockLOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockListLOVSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockListLOV" />
+  </wsdl:message>
+  <wsdl:message name="GetStockListLOVSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockListLOVResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxMovIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaxMovId" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxMovIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaxMovIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxAdjIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaxAdjId" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxAdjIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaxAdjIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMoveItemSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMoveItem" />
+  </wsdl:message>
+  <wsdl:message name="AddMoveItemSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMoveItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAdjustmentSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAdjustment" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAdjustmentSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAdjustmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMovementSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMovement" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMovementSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMovementResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjustmentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdjustment" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjustmentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMovementSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMovement" />
+  </wsdl:message>
+  <wsdl:message name="GetMovementSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMovementResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAdjustStockSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAdjustStock" />
+  </wsdl:message>
+  <wsdl:message name="AddAdjustStockSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAdjustStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjustmentItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentItem" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjustmentItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPOReportSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetPOReportSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetPOReportSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetPOReportSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPOReportDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPOReportDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetPOReportDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPOReportDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecivedPOSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetRecivedPOSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetRecivedPOSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetRecivedPOSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRecivedPODetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRecivedPODetail" />
+  </wsdl:message>
+  <wsdl:message name="GetRecivedPODetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRecivedPODetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMovementSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetMovementSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetMovementSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetMovementSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMovementDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMovementDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetMovementDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMovementDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjustmentSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjustmentSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjustmentDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetAdjustmentDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAdjustmentDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRptRecieveItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRptRecieveItem" />
+  </wsdl:message>
+  <wsdl:message name="GetRptRecieveItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRptRecieveItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRptMoveItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRptMoveItem" />
+  </wsdl:message>
+  <wsdl:message name="GetRptMoveItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRptMoveItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRptAdjustItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRptAdjustItem" />
+  </wsdl:message>
+  <wsdl:message name="GetRptAdjustItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRptAdjustItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRptPriceItemSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRptPriceItem" />
+  </wsdl:message>
+  <wsdl:message name="GetRptPriceItemSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRptPriceItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRptRecieveQTYSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRptRecieveQTY" />
+  </wsdl:message>
+  <wsdl:message name="GetRptRecieveQTYSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRptRecieveQTYResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStockReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStockReport" />
+  </wsdl:message>
+  <wsdl:message name="GetStockReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStockReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPOSMontlyLostProfitReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPOSMontlyLostProfitReport" />
+  </wsdl:message>
+  <wsdl:message name="GetPOSMontlyLostProfitReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPOSMontlyLostProfitReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="svcWarehouseSoap">
+    <wsdl:operation name="GetROItem">
+      <wsdl:input message="tns:GetROItemSoapIn" />
+      <wsdl:output message="tns:GetROItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemInfo">
+      <wsdl:input message="tns:GetItemInfoSoapIn" />
+      <wsdl:output message="tns:GetItemInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewItem">
+      <wsdl:input message="tns:AddNewItemSoapIn" />
+      <wsdl:output message="tns:AddNewItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItemInfo">
+      <wsdl:input message="tns:UpdateItemInfoSoapIn" />
+      <wsdl:output message="tns:UpdateItemInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <wsdl:input message="tns:DeleteItemSoapIn" />
+      <wsdl:output message="tns:DeleteItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSuppInfo">
+      <wsdl:input message="tns:GetSuppInfoSoapIn" />
+      <wsdl:output message="tns:GetSuppInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewSupp">
+      <wsdl:input message="tns:AddNewSuppSoapIn" />
+      <wsdl:output message="tns:AddNewSuppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSuppInfo">
+      <wsdl:input message="tns:UpdateSuppInfoSoapIn" />
+      <wsdl:output message="tns:UpdateSuppInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSupp">
+      <wsdl:input message="tns:DeleteSuppSoapIn" />
+      <wsdl:output message="tns:DeleteSuppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxPOId">
+      <wsdl:input message="tns:GetMaxPOIdSoapIn" />
+      <wsdl:output message="tns:GetMaxPOIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOHeadInfo">
+      <wsdl:input message="tns:GetPOHeadInfoSoapIn" />
+      <wsdl:output message="tns:GetPOHeadInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPODetailInfo">
+      <wsdl:input message="tns:GetPODetailInfoSoapIn" />
+      <wsdl:output message="tns:GetPODetailInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewPO">
+      <wsdl:input message="tns:AddNewPOSoapIn" />
+      <wsdl:output message="tns:AddNewPOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePO">
+      <wsdl:input message="tns:UpdatePOSoapIn" />
+      <wsdl:output message="tns:UpdatePOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePO">
+      <wsdl:input message="tns:DeletePOSoapIn" />
+      <wsdl:output message="tns:DeletePOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierLOV">
+      <wsdl:input message="tns:GetSupplierLOVSoapIn" />
+      <wsdl:output message="tns:GetSupplierLOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemLOV">
+      <wsdl:input message="tns:GetItemLOVSoapIn" />
+      <wsdl:output message="tns:GetItemLOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemStockLOV">
+      <wsdl:input message="tns:GetItemStockLOVSoapIn" />
+      <wsdl:output message="tns:GetItemStockLOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOLOV">
+      <wsdl:input message="tns:GetPOLOVSoapIn" />
+      <wsdl:output message="tns:GetPOLOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecieveInfo">
+      <wsdl:input message="tns:GetRecieveInfoSoapIn" />
+      <wsdl:output message="tns:GetRecieveInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecieveHeader">
+      <wsdl:input message="tns:GetRecieveHeaderSoapIn" />
+      <wsdl:output message="tns:GetRecieveHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecieveDetail">
+      <wsdl:input message="tns:GetRecieveDetailSoapIn" />
+      <wsdl:output message="tns:GetRecieveDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalRecieve">
+      <wsdl:input message="tns:GetTotalRecieveSoapIn" />
+      <wsdl:output message="tns:GetTotalRecieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRecId">
+      <wsdl:input message="tns:GetMaxRecIdSoapIn" />
+      <wsdl:output message="tns:GetMaxRecIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewRecieve">
+      <wsdl:input message="tns:AddNewRecieveSoapIn" />
+      <wsdl:output message="tns:AddNewRecieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecieve">
+      <wsdl:input message="tns:UpdateRecieveSoapIn" />
+      <wsdl:output message="tns:UpdateRecieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecieve">
+      <wsdl:input message="tns:DeleteRecieveSoapIn" />
+      <wsdl:output message="tns:DeleteRecieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOHeader">
+      <wsdl:input message="tns:GetPOHeaderSoapIn" />
+      <wsdl:output message="tns:GetPOHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPODetail">
+      <wsdl:input message="tns:GetPODetailSoapIn" />
+      <wsdl:output message="tns:GetPODetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierList">
+      <wsdl:input message="tns:GetSupplierListSoapIn" />
+      <wsdl:output message="tns:GetSupplierListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseItemList">
+      <wsdl:input message="tns:GetWarehouseItemListSoapIn" />
+      <wsdl:output message="tns:GetWarehouseItemListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovementItem">
+      <wsdl:input message="tns:GetMovementItemSoapIn" />
+      <wsdl:output message="tns:GetMovementItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjHeader">
+      <wsdl:input message="tns:GetAdjHeaderSoapIn" />
+      <wsdl:output message="tns:GetAdjHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjDetail">
+      <wsdl:input message="tns:GetAdjDetailSoapIn" />
+      <wsdl:output message="tns:GetAdjDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoveHeader">
+      <wsdl:input message="tns:GetMoveHeaderSoapIn" />
+      <wsdl:output message="tns:GetMoveHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoveDetail">
+      <wsdl:input message="tns:GetMoveDetailSoapIn" />
+      <wsdl:output message="tns:GetMoveDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockItem">
+      <wsdl:input message="tns:GetStockItemSoapIn" />
+      <wsdl:output message="tns:GetStockItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQTY">
+      <wsdl:input message="tns:GetStockQTYSoapIn" />
+      <wsdl:output message="tns:GetStockQTYSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStock">
+      <wsdl:input message="tns:GetStockSoapIn" />
+      <wsdl:output message="tns:GetStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockLOV">
+      <wsdl:input message="tns:GetStockLOVSoapIn" />
+      <wsdl:output message="tns:GetStockLOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockListLOV">
+      <wsdl:input message="tns:GetStockListLOVSoapIn" />
+      <wsdl:output message="tns:GetStockListLOVSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxMovId">
+      <wsdl:input message="tns:GetMaxMovIdSoapIn" />
+      <wsdl:output message="tns:GetMaxMovIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxAdjId">
+      <wsdl:input message="tns:GetMaxAdjIdSoapIn" />
+      <wsdl:output message="tns:GetMaxAdjIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMoveItem">
+      <wsdl:input message="tns:AddMoveItemSoapIn" />
+      <wsdl:output message="tns:AddMoveItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdjustment">
+      <wsdl:input message="tns:UpdateAdjustmentSoapIn" />
+      <wsdl:output message="tns:UpdateAdjustmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovement">
+      <wsdl:input message="tns:UpdateMovementSoapIn" />
+      <wsdl:output message="tns:UpdateMovementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustment">
+      <wsdl:input message="tns:GetAdjustmentSoapIn" />
+      <wsdl:output message="tns:GetAdjustmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovement">
+      <wsdl:input message="tns:GetMovementSoapIn" />
+      <wsdl:output message="tns:GetMovementSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAdjustStock">
+      <wsdl:input message="tns:AddAdjustStockSoapIn" />
+      <wsdl:output message="tns:AddAdjustStockSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentItem">
+      <wsdl:input message="tns:GetAdjustmentItemSoapIn" />
+      <wsdl:output message="tns:GetAdjustmentItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOReportSummary">
+      <wsdl:input message="tns:GetPOReportSummarySoapIn" />
+      <wsdl:output message="tns:GetPOReportSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOReportDetail">
+      <wsdl:input message="tns:GetPOReportDetailSoapIn" />
+      <wsdl:output message="tns:GetPOReportDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecivedPOSummary">
+      <wsdl:input message="tns:GetRecivedPOSummarySoapIn" />
+      <wsdl:output message="tns:GetRecivedPOSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecivedPODetail">
+      <wsdl:input message="tns:GetRecivedPODetailSoapIn" />
+      <wsdl:output message="tns:GetRecivedPODetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovementSummary">
+      <wsdl:input message="tns:GetMovementSummarySoapIn" />
+      <wsdl:output message="tns:GetMovementSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovementDetail">
+      <wsdl:input message="tns:GetMovementDetailSoapIn" />
+      <wsdl:output message="tns:GetMovementDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentSummary">
+      <wsdl:input message="tns:GetAdjustmentSummarySoapIn" />
+      <wsdl:output message="tns:GetAdjustmentSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentDetail">
+      <wsdl:input message="tns:GetAdjustmentDetailSoapIn" />
+      <wsdl:output message="tns:GetAdjustmentDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRptRecieveItem">
+      <wsdl:input message="tns:GetRptRecieveItemSoapIn" />
+      <wsdl:output message="tns:GetRptRecieveItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRptMoveItem">
+      <wsdl:input message="tns:GetRptMoveItemSoapIn" />
+      <wsdl:output message="tns:GetRptMoveItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRptAdjustItem">
+      <wsdl:input message="tns:GetRptAdjustItemSoapIn" />
+      <wsdl:output message="tns:GetRptAdjustItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRptPriceItem">
+      <wsdl:input message="tns:GetRptPriceItemSoapIn" />
+      <wsdl:output message="tns:GetRptPriceItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRptRecieveQTY">
+      <wsdl:input message="tns:GetRptRecieveQTYSoapIn" />
+      <wsdl:output message="tns:GetRptRecieveQTYSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStockReport">
+      <wsdl:input message="tns:GetStockReportSoapIn" />
+      <wsdl:output message="tns:GetStockReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOSMontlyLostProfitReport">
+      <wsdl:input message="tns:GetPOSMontlyLostProfitReportSoapIn" />
+      <wsdl:output message="tns:GetPOSMontlyLostProfitReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="svcWarehouseSoap" type="tns:svcWarehouseSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetROItem">
+      <soap:operation soapAction="http://tempuri.org/GetROItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemInfo">
+      <soap:operation soapAction="http://tempuri.org/GetItemInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewItem">
+      <soap:operation soapAction="http://tempuri.org/AddNewItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItemInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateItemInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <soap:operation soapAction="http://tempuri.org/DeleteItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuppInfo">
+      <soap:operation soapAction="http://tempuri.org/GetSuppInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewSupp">
+      <soap:operation soapAction="http://tempuri.org/AddNewSupp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSuppInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateSuppInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSupp">
+      <soap:operation soapAction="http://tempuri.org/DeleteSupp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxPOId">
+      <soap:operation soapAction="http://tempuri.org/GetMaxPOId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOHeadInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPOHeadInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPODetailInfo">
+      <soap:operation soapAction="http://tempuri.org/GetPODetailInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewPO">
+      <soap:operation soapAction="http://tempuri.org/AddNewPO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePO">
+      <soap:operation soapAction="http://tempuri.org/UpdatePO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePO">
+      <soap:operation soapAction="http://tempuri.org/DeletePO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierLOV">
+      <soap:operation soapAction="http://tempuri.org/GetSupplierLOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemLOV">
+      <soap:operation soapAction="http://tempuri.org/GetItemLOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemStockLOV">
+      <soap:operation soapAction="http://tempuri.org/GetItemStockLOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOLOV">
+      <soap:operation soapAction="http://tempuri.org/GetPOLOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecieveInfo">
+      <soap:operation soapAction="http://tempuri.org/GetRecieveInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecieveHeader">
+      <soap:operation soapAction="http://tempuri.org/GetRecieveHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecieveDetail">
+      <soap:operation soapAction="http://tempuri.org/GetRecieveDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalRecieve">
+      <soap:operation soapAction="http://tempuri.org/GetTotalRecieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRecId">
+      <soap:operation soapAction="http://tempuri.org/GetMaxRecId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewRecieve">
+      <soap:operation soapAction="http://tempuri.org/AddNewRecieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecieve">
+      <soap:operation soapAction="http://tempuri.org/UpdateRecieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecieve">
+      <soap:operation soapAction="http://tempuri.org/DeleteRecieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOHeader">
+      <soap:operation soapAction="http://tempuri.org/GetPOHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPODetail">
+      <soap:operation soapAction="http://tempuri.org/GetPODetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierList">
+      <soap:operation soapAction="http://tempuri.org/GetSupplierList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseItemList">
+      <soap:operation soapAction="http://tempuri.org/GetWarehouseItemList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovementItem">
+      <soap:operation soapAction="http://tempuri.org/GetMovementItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjHeader">
+      <soap:operation soapAction="http://tempuri.org/GetAdjHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjDetail">
+      <soap:operation soapAction="http://tempuri.org/GetAdjDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoveHeader">
+      <soap:operation soapAction="http://tempuri.org/GetMoveHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoveDetail">
+      <soap:operation soapAction="http://tempuri.org/GetMoveDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockItem">
+      <soap:operation soapAction="http://tempuri.org/GetStockItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQTY">
+      <soap:operation soapAction="http://tempuri.org/GetStockQTY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStock">
+      <soap:operation soapAction="http://tempuri.org/GetStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockLOV">
+      <soap:operation soapAction="http://tempuri.org/GetStockLOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockListLOV">
+      <soap:operation soapAction="http://tempuri.org/GetStockListLOV" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxMovId">
+      <soap:operation soapAction="http://tempuri.org/GetMaxMovId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxAdjId">
+      <soap:operation soapAction="http://tempuri.org/GetMaxAdjId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMoveItem">
+      <soap:operation soapAction="http://tempuri.org/AddMoveItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdjustment">
+      <soap:operation soapAction="http://tempuri.org/UpdateAdjustment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovement">
+      <soap:operation soapAction="http://tempuri.org/UpdateMovement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustment">
+      <soap:operation soapAction="http://tempuri.org/GetAdjustment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovement">
+      <soap:operation soapAction="http://tempuri.org/GetMovement" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAdjustStock">
+      <soap:operation soapAction="http://tempuri.org/AddAdjustStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentItem">
+      <soap:operation soapAction="http://tempuri.org/GetAdjustmentItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOReportSummary">
+      <soap:operation soapAction="http://tempuri.org/GetPOReportSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOReportDetail">
+      <soap:operation soapAction="http://tempuri.org/GetPOReportDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecivedPOSummary">
+      <soap:operation soapAction="http://tempuri.org/GetRecivedPOSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecivedPODetail">
+      <soap:operation soapAction="http://tempuri.org/GetRecivedPODetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovementSummary">
+      <soap:operation soapAction="http://tempuri.org/GetMovementSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovementDetail">
+      <soap:operation soapAction="http://tempuri.org/GetMovementDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentSummary">
+      <soap:operation soapAction="http://tempuri.org/GetAdjustmentSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentDetail">
+      <soap:operation soapAction="http://tempuri.org/GetAdjustmentDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRptRecieveItem">
+      <soap:operation soapAction="http://tempuri.org/GetRptRecieveItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRptMoveItem">
+      <soap:operation soapAction="http://tempuri.org/GetRptMoveItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRptAdjustItem">
+      <soap:operation soapAction="http://tempuri.org/GetRptAdjustItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRptPriceItem">
+      <soap:operation soapAction="http://tempuri.org/GetRptPriceItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRptRecieveQTY">
+      <soap:operation soapAction="http://tempuri.org/GetRptRecieveQTY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockReport">
+      <soap:operation soapAction="http://tempuri.org/GetStockReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOSMontlyLostProfitReport">
+      <soap:operation soapAction="http://tempuri.org/GetPOSMontlyLostProfitReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="svcWarehouseSoap12" type="tns:svcWarehouseSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="GetROItem">
+      <soap12:operation soapAction="http://tempuri.org/GetROItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetItemInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewItem">
+      <soap12:operation soapAction="http://tempuri.org/AddNewItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateItemInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateItemInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteItem">
+      <soap12:operation soapAction="http://tempuri.org/DeleteItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSuppInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetSuppInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewSupp">
+      <soap12:operation soapAction="http://tempuri.org/AddNewSupp" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSuppInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateSuppInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSupp">
+      <soap12:operation soapAction="http://tempuri.org/DeleteSupp" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxPOId">
+      <soap12:operation soapAction="http://tempuri.org/GetMaxPOId" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOHeadInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPOHeadInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPODetailInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetPODetailInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewPO">
+      <soap12:operation soapAction="http://tempuri.org/AddNewPO" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePO">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePO" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePO">
+      <soap12:operation soapAction="http://tempuri.org/DeletePO" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierLOV">
+      <soap12:operation soapAction="http://tempuri.org/GetSupplierLOV" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemLOV">
+      <soap12:operation soapAction="http://tempuri.org/GetItemLOV" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemStockLOV">
+      <soap12:operation soapAction="http://tempuri.org/GetItemStockLOV" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOLOV">
+      <soap12:operation soapAction="http://tempuri.org/GetPOLOV" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecieveInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetRecieveInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecieveHeader">
+      <soap12:operation soapAction="http://tempuri.org/GetRecieveHeader" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecieveDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetRecieveDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalRecieve">
+      <soap12:operation soapAction="http://tempuri.org/GetTotalRecieve" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRecId">
+      <soap12:operation soapAction="http://tempuri.org/GetMaxRecId" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewRecieve">
+      <soap12:operation soapAction="http://tempuri.org/AddNewRecieve" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRecieve">
+      <soap12:operation soapAction="http://tempuri.org/UpdateRecieve" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRecieve">
+      <soap12:operation soapAction="http://tempuri.org/DeleteRecieve" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOHeader">
+      <soap12:operation soapAction="http://tempuri.org/GetPOHeader" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPODetail">
+      <soap12:operation soapAction="http://tempuri.org/GetPODetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSupplierList">
+      <soap12:operation soapAction="http://tempuri.org/GetSupplierList" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarehouseItemList">
+      <soap12:operation soapAction="http://tempuri.org/GetWarehouseItemList" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovementItem">
+      <soap12:operation soapAction="http://tempuri.org/GetMovementItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjHeader">
+      <soap12:operation soapAction="http://tempuri.org/GetAdjHeader" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetAdjDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoveHeader">
+      <soap12:operation soapAction="http://tempuri.org/GetMoveHeader" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMoveDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetMoveDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockItem">
+      <soap12:operation soapAction="http://tempuri.org/GetStockItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockQTY">
+      <soap12:operation soapAction="http://tempuri.org/GetStockQTY" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStock">
+      <soap12:operation soapAction="http://tempuri.org/GetStock" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockLOV">
+      <soap12:operation soapAction="http://tempuri.org/GetStockLOV" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockListLOV">
+      <soap12:operation soapAction="http://tempuri.org/GetStockListLOV" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxMovId">
+      <soap12:operation soapAction="http://tempuri.org/GetMaxMovId" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxAdjId">
+      <soap12:operation soapAction="http://tempuri.org/GetMaxAdjId" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMoveItem">
+      <soap12:operation soapAction="http://tempuri.org/AddMoveItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAdjustment">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAdjustment" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMovement">
+      <soap12:operation soapAction="http://tempuri.org/UpdateMovement" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustment">
+      <soap12:operation soapAction="http://tempuri.org/GetAdjustment" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovement">
+      <soap12:operation soapAction="http://tempuri.org/GetMovement" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAdjustStock">
+      <soap12:operation soapAction="http://tempuri.org/AddAdjustStock" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentItem">
+      <soap12:operation soapAction="http://tempuri.org/GetAdjustmentItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOReportSummary">
+      <soap12:operation soapAction="http://tempuri.org/GetPOReportSummary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOReportDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetPOReportDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecivedPOSummary">
+      <soap12:operation soapAction="http://tempuri.org/GetRecivedPOSummary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecivedPODetail">
+      <soap12:operation soapAction="http://tempuri.org/GetRecivedPODetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovementSummary">
+      <soap12:operation soapAction="http://tempuri.org/GetMovementSummary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMovementDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetMovementDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentSummary">
+      <soap12:operation soapAction="http://tempuri.org/GetAdjustmentSummary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdjustmentDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetAdjustmentDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRptRecieveItem">
+      <soap12:operation soapAction="http://tempuri.org/GetRptRecieveItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRptMoveItem">
+      <soap12:operation soapAction="http://tempuri.org/GetRptMoveItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRptAdjustItem">
+      <soap12:operation soapAction="http://tempuri.org/GetRptAdjustItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRptPriceItem">
+      <soap12:operation soapAction="http://tempuri.org/GetRptPriceItem" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRptRecieveQTY">
+      <soap12:operation soapAction="http://tempuri.org/GetRptRecieveQTY" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStockReport">
+      <soap12:operation soapAction="http://tempuri.org/GetStockReport" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOSMontlyLostProfitReport">
+      <soap12:operation soapAction="http://tempuri.org/GetPOSMontlyLostProfitReport" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="svcWarehouse">
+    <wsdl:port name="svcWarehouseSoap" binding="tns:svcWarehouseSoap">
+      <soap:address location="http://localhost/KatalaWebServices/svcWarehouse.asmx" />
+    </wsdl:port>
+    <wsdl:port name="svcWarehouseSoap12" binding="tns:svcWarehouseSoap12">
+      <soap12:address location="http://localhost/KatalaWebServices/svcWarehouse.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

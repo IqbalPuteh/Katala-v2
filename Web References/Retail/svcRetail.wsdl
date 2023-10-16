@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/KatalaWebServices/svcRetail" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/KatalaWebServices/svcRetail" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/KatalaWebServices/svcRetail">
+      <s:element name="AddNewMember">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewMemberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewMemberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMember">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateMemberResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMaxRetId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMaxRetIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMaxRetIdResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMemberId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMemberName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMemberDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strStart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEnd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMembershipNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strVoucherNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHeaderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddNewMemberSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewMember" />
+  </wsdl:message>
+  <wsdl:message name="AddNewMemberSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMemberSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateMember" />
+  </wsdl:message>
+  <wsdl:message name="UpdateMemberSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRetIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMaxRetId" />
+  </wsdl:message>
+  <wsdl:message name="GetMaxRetIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMaxRetIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberData" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHeaderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="svcRetailSoap">
+    <wsdl:operation name="AddNewMember">
+      <wsdl:input message="tns:AddNewMemberSoapIn" />
+      <wsdl:output message="tns:AddNewMemberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <wsdl:input message="tns:UpdateMemberSoapIn" />
+      <wsdl:output message="tns:UpdateMemberSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRetId">
+      <wsdl:input message="tns:GetMaxRetIdSoapIn" />
+      <wsdl:output message="tns:GetMaxRetIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberData">
+      <wsdl:input message="tns:GetMemberDataSoapIn" />
+      <wsdl:output message="tns:GetMemberDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHeader">
+      <wsdl:input message="tns:GetHeaderSoapIn" />
+      <wsdl:output message="tns:GetHeaderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="svcRetailSoap" type="tns:svcRetailSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddNewMember">
+      <soap:operation soapAction="http://tempuri.org/KatalaWebServices/svcRetail/AddNewMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <soap:operation soapAction="http://tempuri.org/KatalaWebServices/svcRetail/UpdateMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRetId">
+      <soap:operation soapAction="http://tempuri.org/KatalaWebServices/svcRetail/GetMaxRetId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberData">
+      <soap:operation soapAction="http://tempuri.org/KatalaWebServices/svcRetail/GetMemberData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHeader">
+      <soap:operation soapAction="http://tempuri.org/KatalaWebServices/svcRetail/GetHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="svcRetailSoap12" type="tns:svcRetailSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="AddNewMember">
+      <soap12:operation soapAction="http://tempuri.org/KatalaWebServices/svcRetail/AddNewMember" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMember">
+      <soap12:operation soapAction="http://tempuri.org/KatalaWebServices/svcRetail/UpdateMember" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxRetId">
+      <soap12:operation soapAction="http://tempuri.org/KatalaWebServices/svcRetail/GetMaxRetId" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberData">
+      <soap12:operation soapAction="http://tempuri.org/KatalaWebServices/svcRetail/GetMemberData" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHeader">
+      <soap12:operation soapAction="http://tempuri.org/KatalaWebServices/svcRetail/GetHeader" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="svcRetail">
+    <wsdl:port name="svcRetailSoap" binding="tns:svcRetailSoap">
+      <soap:address location="http://localhost/KatalaWebServices/svcRetail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="svcRetailSoap12" binding="tns:svcRetailSoap12">
+      <soap12:address location="http://localhost/KatalaWebServices/svcRetail.asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

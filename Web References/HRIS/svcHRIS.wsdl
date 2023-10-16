@@ -1,0 +1,1704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetEmployeeName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewEmployee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewEmployeeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEmployeeInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEmployeeInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteEmployee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmpId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteEmployeeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRPTEmpDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHistory" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRPTEmpDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRPTEmpDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestEMPDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestEMPDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLatestEMPDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestEMPPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestEMPPositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLatestEMPPositionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecordId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmpDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmpDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewEmpDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewEmpDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewEmpDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEmpDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEmpDetailResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteEmpDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmpId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEmpDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteEmpDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestEMPPost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestEMPPostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLatestEMPPostResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRPTEmpPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHistory" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRPTEmpPositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRPTEmpPositionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEMPPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPositionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEMPPositionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateEMPPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEMPPositionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddNewEMPPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewEMPPositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewEMPPositionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEMPPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPositionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEMPPositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEMPPositionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRPTEmpSalary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHistory" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRPTEmpSalaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRPTEmpSalaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEMPSalary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecordId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEMPSalaryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateEMPSalary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEMPSalaryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddNewEMPSalary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strRecord" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewEMPSalaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewEMPSalaryResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEMPSalary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecordId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEMPSalaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEMPSalaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestEMPSalary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestEMPSalaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLatestEMPSalaryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteHRPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPositionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteHRPositionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateHRPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateHRPositionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddNewHRPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewHRPositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddNewHRPositionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHRPosition">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPositionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSuperiorId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHRPositionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHRPositionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRPTEmpNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHistory" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRPTEmpNoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRPTEmpNoteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEMPNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecordId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEMPNoteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateEMPNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEMPNoteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddNewEMPNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="adoDS">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddNewEMPNoteResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEMPNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRecordId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEMPNoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEMPNoteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEMPNoteDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dtDateInput" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEMPNoteDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEMPNoteDateResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestEMPNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPP_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLatestEMPNoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLatestEMPNoteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetEmployeeNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeName" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewEmployee" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmployeeInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmployeeInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEmployeeInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteEmployee" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRPTEmpDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRPTEmpDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetRPTEmpDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRPTEmpDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestEMPDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLatestEMPDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestEMPDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLatestEMPDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestEMPPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLatestEMPPosition" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestEMPPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLatestEMPPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmpDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetEmpDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmpDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEmpDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewEmpDetail" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEmpDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewEmpDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmpDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEmpDetail" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEmpDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEmpDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmpDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteEmpDetail" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmpDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteEmpDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestEMPPostSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLatestEMPPost" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestEMPPostSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLatestEMPPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRPTEmpPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRPTEmpPosition" />
+  </wsdl:message>
+  <wsdl:message name="GetRPTEmpPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRPTEmpPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEMPPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteEMPPosition" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEMPPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteEMPPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEMPPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEMPPosition" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEMPPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEMPPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEMPPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewEMPPosition" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEMPPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewEMPPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEMPPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEMPPosition" />
+  </wsdl:message>
+  <wsdl:message name="GetEMPPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEMPPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRPTEmpSalarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetRPTEmpSalary" />
+  </wsdl:message>
+  <wsdl:message name="GetRPTEmpSalarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetRPTEmpSalaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEMPSalarySoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteEMPSalary" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEMPSalarySoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteEMPSalaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEMPSalarySoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEMPSalary" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEMPSalarySoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEMPSalaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEMPSalarySoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewEMPSalary" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEMPSalarySoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewEMPSalaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEMPSalarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetEMPSalary" />
+  </wsdl:message>
+  <wsdl:message name="GetEMPSalarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetEMPSalaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestEMPSalarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetLatestEMPSalary" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestEMPSalarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetLatestEMPSalaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteHRPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteHRPosition" />
+  </wsdl:message>
+  <wsdl:message name="DeleteHRPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteHRPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateHRPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateHRPosition" />
+  </wsdl:message>
+  <wsdl:message name="UpdateHRPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateHRPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewHRPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewHRPosition" />
+  </wsdl:message>
+  <wsdl:message name="AddNewHRPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewHRPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetHRPositionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHRPosition" />
+  </wsdl:message>
+  <wsdl:message name="GetHRPositionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHRPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRPTEmpNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRPTEmpNote" />
+  </wsdl:message>
+  <wsdl:message name="GetRPTEmpNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRPTEmpNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEMPNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteEMPNote" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEMPNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteEMPNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEMPNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEMPNote" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEMPNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEMPNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEMPNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:AddNewEMPNote" />
+  </wsdl:message>
+  <wsdl:message name="AddNewEMPNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:AddNewEMPNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEMPNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEMPNote" />
+  </wsdl:message>
+  <wsdl:message name="GetEMPNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEMPNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEMPNoteDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEMPNoteDate" />
+  </wsdl:message>
+  <wsdl:message name="GetEMPNoteDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEMPNoteDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestEMPNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLatestEMPNote" />
+  </wsdl:message>
+  <wsdl:message name="GetLatestEMPNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLatestEMPNoteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="svcHRISSoap">
+    <wsdl:operation name="GetEmployeeName">
+      <wsdl:input message="tns:GetEmployeeNameSoapIn" />
+      <wsdl:output message="tns:GetEmployeeNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeInfo">
+      <wsdl:input message="tns:GetEmployeeInfoSoapIn" />
+      <wsdl:output message="tns:GetEmployeeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEmployee">
+      <wsdl:input message="tns:AddNewEmployeeSoapIn" />
+      <wsdl:output message="tns:AddNewEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeInfo">
+      <wsdl:input message="tns:UpdateEmployeeInfoSoapIn" />
+      <wsdl:output message="tns:UpdateEmployeeInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <wsdl:input message="tns:DeleteEmployeeSoapIn" />
+      <wsdl:output message="tns:DeleteEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpDetail">
+      <wsdl:input message="tns:GetRPTEmpDetailSoapIn" />
+      <wsdl:output message="tns:GetRPTEmpDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPDetail">
+      <wsdl:input message="tns:GetLatestEMPDetailSoapIn" />
+      <wsdl:output message="tns:GetLatestEMPDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPPosition">
+      <wsdl:input message="tns:GetLatestEMPPositionSoapIn" />
+      <wsdl:output message="tns:GetLatestEMPPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpDetail">
+      <wsdl:input message="tns:GetEmpDetailSoapIn" />
+      <wsdl:output message="tns:GetEmpDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEmpDetail">
+      <wsdl:input message="tns:AddNewEmpDetailSoapIn" />
+      <wsdl:output message="tns:AddNewEmpDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmpDetail">
+      <wsdl:input message="tns:UpdateEmpDetailSoapIn" />
+      <wsdl:output message="tns:UpdateEmpDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmpDetail">
+      <wsdl:input message="tns:DeleteEmpDetailSoapIn" />
+      <wsdl:output message="tns:DeleteEmpDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPPost">
+      <wsdl:input message="tns:GetLatestEMPPostSoapIn" />
+      <wsdl:output message="tns:GetLatestEMPPostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpPosition">
+      <wsdl:input message="tns:GetRPTEmpPositionSoapIn" />
+      <wsdl:output message="tns:GetRPTEmpPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEMPPosition">
+      <wsdl:input message="tns:DeleteEMPPositionSoapIn" />
+      <wsdl:output message="tns:DeleteEMPPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEMPPosition">
+      <wsdl:input message="tns:UpdateEMPPositionSoapIn" />
+      <wsdl:output message="tns:UpdateEMPPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEMPPosition">
+      <wsdl:input message="tns:AddNewEMPPositionSoapIn" />
+      <wsdl:output message="tns:AddNewEMPPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPPosition">
+      <wsdl:input message="tns:GetEMPPositionSoapIn" />
+      <wsdl:output message="tns:GetEMPPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpSalary">
+      <wsdl:input message="tns:GetRPTEmpSalarySoapIn" />
+      <wsdl:output message="tns:GetRPTEmpSalarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEMPSalary">
+      <wsdl:input message="tns:DeleteEMPSalarySoapIn" />
+      <wsdl:output message="tns:DeleteEMPSalarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEMPSalary">
+      <wsdl:input message="tns:UpdateEMPSalarySoapIn" />
+      <wsdl:output message="tns:UpdateEMPSalarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEMPSalary">
+      <wsdl:input message="tns:AddNewEMPSalarySoapIn" />
+      <wsdl:output message="tns:AddNewEMPSalarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPSalary">
+      <wsdl:input message="tns:GetEMPSalarySoapIn" />
+      <wsdl:output message="tns:GetEMPSalarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPSalary">
+      <wsdl:input message="tns:GetLatestEMPSalarySoapIn" />
+      <wsdl:output message="tns:GetLatestEMPSalarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHRPosition">
+      <wsdl:input message="tns:DeleteHRPositionSoapIn" />
+      <wsdl:output message="tns:DeleteHRPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHRPosition">
+      <wsdl:input message="tns:UpdateHRPositionSoapIn" />
+      <wsdl:output message="tns:UpdateHRPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewHRPosition">
+      <wsdl:input message="tns:AddNewHRPositionSoapIn" />
+      <wsdl:output message="tns:AddNewHRPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHRPosition">
+      <wsdl:input message="tns:GetHRPositionSoapIn" />
+      <wsdl:output message="tns:GetHRPositionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpNote">
+      <wsdl:input message="tns:GetRPTEmpNoteSoapIn" />
+      <wsdl:output message="tns:GetRPTEmpNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEMPNote">
+      <wsdl:input message="tns:DeleteEMPNoteSoapIn" />
+      <wsdl:output message="tns:DeleteEMPNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEMPNote">
+      <wsdl:input message="tns:UpdateEMPNoteSoapIn" />
+      <wsdl:output message="tns:UpdateEMPNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEMPNote">
+      <wsdl:input message="tns:AddNewEMPNoteSoapIn" />
+      <wsdl:output message="tns:AddNewEMPNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPNote">
+      <wsdl:input message="tns:GetEMPNoteSoapIn" />
+      <wsdl:output message="tns:GetEMPNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPNoteDate">
+      <wsdl:input message="tns:GetEMPNoteDateSoapIn" />
+      <wsdl:output message="tns:GetEMPNoteDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPNote">
+      <wsdl:input message="tns:GetLatestEMPNoteSoapIn" />
+      <wsdl:output message="tns:GetLatestEMPNoteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="svcHRISSoap" type="tns:svcHRISSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetEmployeeName">
+      <soap:operation soapAction="http://tempuri.org/GetEmployeeName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeInfo">
+      <soap:operation soapAction="http://tempuri.org/GetEmployeeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEmployee">
+      <soap:operation soapAction="http://tempuri.org/AddNewEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateEmployeeInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <soap:operation soapAction="http://tempuri.org/DeleteEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpDetail">
+      <soap:operation soapAction="http://tempuri.org/GetRPTEmpDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPDetail">
+      <soap:operation soapAction="http://tempuri.org/GetLatestEMPDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPPosition">
+      <soap:operation soapAction="http://tempuri.org/GetLatestEMPPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpDetail">
+      <soap:operation soapAction="http://tempuri.org/GetEmpDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEmpDetail">
+      <soap:operation soapAction="http://tempuri.org/AddNewEmpDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmpDetail">
+      <soap:operation soapAction="http://tempuri.org/UpdateEmpDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmpDetail">
+      <soap:operation soapAction="http://tempuri.org/DeleteEmpDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPPost">
+      <soap:operation soapAction="http://tempuri.org/GetLatestEMPPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpPosition">
+      <soap:operation soapAction="http://tempuri.org/GetRPTEmpPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEMPPosition">
+      <soap:operation soapAction="http://tempuri.org/DeleteEMPPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEMPPosition">
+      <soap:operation soapAction="http://tempuri.org/UpdateEMPPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEMPPosition">
+      <soap:operation soapAction="http://tempuri.org/AddNewEMPPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPPosition">
+      <soap:operation soapAction="http://tempuri.org/GetEMPPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpSalary">
+      <soap:operation soapAction="http://tempuri.org/GetRPTEmpSalary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEMPSalary">
+      <soap:operation soapAction="http://tempuri.org/DeleteEMPSalary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEMPSalary">
+      <soap:operation soapAction="http://tempuri.org/UpdateEMPSalary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEMPSalary">
+      <soap:operation soapAction="http://tempuri.org/AddNewEMPSalary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPSalary">
+      <soap:operation soapAction="http://tempuri.org/GetEMPSalary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPSalary">
+      <soap:operation soapAction="http://tempuri.org/GetLatestEMPSalary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHRPosition">
+      <soap:operation soapAction="http://tempuri.org/DeleteHRPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHRPosition">
+      <soap:operation soapAction="http://tempuri.org/UpdateHRPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewHRPosition">
+      <soap:operation soapAction="http://tempuri.org/AddNewHRPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHRPosition">
+      <soap:operation soapAction="http://tempuri.org/GetHRPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpNote">
+      <soap:operation soapAction="http://tempuri.org/GetRPTEmpNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEMPNote">
+      <soap:operation soapAction="http://tempuri.org/DeleteEMPNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEMPNote">
+      <soap:operation soapAction="http://tempuri.org/UpdateEMPNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEMPNote">
+      <soap:operation soapAction="http://tempuri.org/AddNewEMPNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPNote">
+      <soap:operation soapAction="http://tempuri.org/GetEMPNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPNoteDate">
+      <soap:operation soapAction="http://tempuri.org/GetEMPNoteDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPNote">
+      <soap:operation soapAction="http://tempuri.org/GetLatestEMPNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="svcHRISSoap12" type="tns:svcHRISSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <wsdl:operation name="GetEmployeeName">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployeeName" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployeeInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEmployee">
+      <soap12:operation soapAction="http://tempuri.org/AddNewEmployee" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmployeeInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateEmployeeInfo" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployee">
+      <soap12:operation soapAction="http://tempuri.org/DeleteEmployee" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetRPTEmpDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetLatestEMPDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPPosition">
+      <soap12:operation soapAction="http://tempuri.org/GetLatestEMPPosition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmpDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetEmpDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEmpDetail">
+      <soap12:operation soapAction="http://tempuri.org/AddNewEmpDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmpDetail">
+      <soap12:operation soapAction="http://tempuri.org/UpdateEmpDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmpDetail">
+      <soap12:operation soapAction="http://tempuri.org/DeleteEmpDetail" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPPost">
+      <soap12:operation soapAction="http://tempuri.org/GetLatestEMPPost" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpPosition">
+      <soap12:operation soapAction="http://tempuri.org/GetRPTEmpPosition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEMPPosition">
+      <soap12:operation soapAction="http://tempuri.org/DeleteEMPPosition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEMPPosition">
+      <soap12:operation soapAction="http://tempuri.org/UpdateEMPPosition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEMPPosition">
+      <soap12:operation soapAction="http://tempuri.org/AddNewEMPPosition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPPosition">
+      <soap12:operation soapAction="http://tempuri.org/GetEMPPosition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpSalary">
+      <soap12:operation soapAction="http://tempuri.org/GetRPTEmpSalary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEMPSalary">
+      <soap12:operation soapAction="http://tempuri.org/DeleteEMPSalary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEMPSalary">
+      <soap12:operation soapAction="http://tempuri.org/UpdateEMPSalary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEMPSalary">
+      <soap12:operation soapAction="http://tempuri.org/AddNewEMPSalary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPSalary">
+      <soap12:operation soapAction="http://tempuri.org/GetEMPSalary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPSalary">
+      <soap12:operation soapAction="http://tempuri.org/GetLatestEMPSalary" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHRPosition">
+      <soap12:operation soapAction="http://tempuri.org/DeleteHRPosition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateHRPosition">
+      <soap12:operation soapAction="http://tempuri.org/UpdateHRPosition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewHRPosition">
+      <soap12:operation soapAction="http://tempuri.org/AddNewHRPosition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHRPosition">
+      <soap12:operation soapAction="http://tempuri.org/GetHRPosition" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRPTEmpNote">
+      <soap12:operation soapAction="http://tempuri.org/GetRPTEmpNote" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEMPNote">
+      <soap12:operation soapAction="http://tempuri.org/DeleteEMPNote" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEMPNote">
+      <soap12:operation soapAction="http://tempuri.org/UpdateEMPNote" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewEMPNote">
+      <soap12:operation soapAction="http://tempuri.org/AddNewEMPNote" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPNote">
+      <soap12:operation soapAction="http://tempuri.org/GetEMPNote" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEMPNoteDate">
+      <soap12:operation soapAction="http://tempuri.org/GetEMPNoteDate" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestEMPNote">
+      <soap12:operation soapAction="http://tempuri.org/GetLatestEMPNote" style="document" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <wsdl:input>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="svcHRIS">
+    <wsdl:port name="svcHRISSoap" binding="tns:svcHRISSoap">
+      <soap:address location="http://localhost/KatalaWebServices/svcHRIS.Asmx" />
+    </wsdl:port>
+    <wsdl:port name="svcHRISSoap12" binding="tns:svcHRISSoap12">
+      <soap12:address location="http://localhost/KatalaWebServices/svcHRIS.Asmx" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
